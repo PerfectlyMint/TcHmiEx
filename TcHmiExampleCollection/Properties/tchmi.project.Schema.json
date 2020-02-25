@@ -84,6 +84,18 @@
           }
         }
       ]
+    },
+    "Symbol_Of_Control": {
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:framework#/definitions/Control"
+          }
+        }
+      ]
     }
   }
 }

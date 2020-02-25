@@ -1,0 +1,73 @@
+﻿{
+  "function": {
+    "name": "BindSymbolFromArrayIndex",
+    "displayName": "BindSymbolFromArrayIndex",
+    "visible": true,
+    "category": "Binding",
+    "waitMode": "Asynchronous",
+    "injectContextObject": true,
+    "description": "BindSymbolFromArrayIndex",
+    "returnValue": {
+      "type": "tchmi:framework#/definitions/Symbol"
+    },
+    "arguments": [
+      {
+        "name": "ctx",
+        "displayName": "ctx",
+        "type": "tchmi:framework#/definitions/ContextReference",
+        "description": "Context Reference",
+        "defaultValue": null,
+        "required": true,
+        "bindable": false,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "ArraySymbol",
+        "displayName": "Array Symbol",
+        "type": "tchmi:framework#/definitions/Symbol",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "Index",
+        "displayName": "Index",
+        "type": "tchmi:general#/definitions/Integer",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "Control",
+        "displayName": "Control",
+        "type": "tchmi:framework#/definitions/Control",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "Property",
+        "displayName": "Property",
+        "type": "tchmi:framework#/definitions/ControlPropertyName",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "refTo": "Control"
+      }
+    ]
+  },
+  "$schema": "C:/TwinCAT/Functions/TE2000-HMI-Engineering/Infrastructure/TcHmiFramework/Latest/Schema/FunctionDescription.Schema.json"
+}

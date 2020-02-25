@@ -159,13 +159,22 @@
     },
     {
       "url": "Scripts/OpenLinkInNewTab.js"
+    },
+    {
+      "url": "Scripts/BindSymbolFromArrayIndex.js"
     }
   ],
   "symbols": {
     "internal": {
       "TestiStringi": {
-        "value": "",
+        "value": "'{\"color\":\"rgba(90,120,30,b)\"}'",
         "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "testBool": {
+        "value": true,
+        "type": "tchmi:general#/definitions/Boolean",
         "persist": false,
         "readonly": false
       }

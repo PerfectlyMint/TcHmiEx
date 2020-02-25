@@ -52,7 +52,7 @@
 
 </div>
 
-<div id="TcHmiGrid_1" data-tchmi-type="tchmi-grid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<div id="TcHmiGrid_1" data-tchmi-type="tchmi-grid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-locked="False">
 <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
 [
   {
@@ -189,236 +189,6 @@
 
 </div>
 
-<div id="TcHmiContainer" data-tchmi-type="tchmi-container" data-tchmi-grid-column-index="6" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
-
-<div id="TcHmiImage_3" data-tchmi-type="tchmi-image" data-tchmi-height-unit="px" data-tchmi-left="-5" data-tchmi-left-unit="px" data-tchmi-src="Images/Icons/Menu/language_normal.svg" data-tchmi-top="-5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="-5" data-tchmi-bottom="15">
-
-</div>
-
-<div id="TcHmiLanguageCombobox" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="Select" data-tchmi-height="28" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Center" data-tchmi-selected-index="0">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 5,
-  "right": 3,
-  "top": 3,
-  "bottom": 3,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-
-<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
-[
-  {
-    "id": 0,
-    "value": "0",
-    "text": "English"
-  },
-  {
-    "id": 1,
-    "value": "1",
-    "text": "Finnish"
-  },
-  {
-    "id": 2,
-    "value": "2",
-    "text": "Deutsch"
-  }
-]
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "TcHmiLanguageCombobox.onSelectionChanged",
-    "actions": [
-      {
-        "objectType": "SwitchCase",
-        "active": true,
-        "compare": {
-          "objectType": "Symbol",
-          "symbolExpression": "%ctrl%TcHmiLanguageCombobox::SelectedIndex%/ctrl%"
-        },
-        "cases": [
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/UDINT",
-              "value": 0
-            },
-            "actions": [
-              {
-                "objectType": "Function",
-                "active": true,
-                "fn": "SetLocale",
-                "fnParams": [
-                  {
-                    "objectType": "StaticValue",
-                    "valueType": "tchmi:general#/definitions/ProjectLocale",
-                    "value": "en-US"
-                  }
-                ],
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/UDINT",
-              "value": 1
-            },
-            "actions": [
-              {
-                "objectType": "Function",
-                "active": true,
-                "fn": "SetLocale",
-                "fnParams": [
-                  {
-                    "objectType": "StaticValue",
-                    "valueType": "tchmi:general#/definitions/ProjectLocale",
-                    "value": "fi-FI"
-                  }
-                ],
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/UDINT",
-              "value": 2
-            },
-            "actions": [
-              {
-                "objectType": "Function",
-                "active": true,
-                "fn": "SetLocale",
-                "fnParams": [
-                  {
-                    "objectType": "StaticValue",
-                    "valueType": "tchmi:general#/definitions/ProjectLocale",
-                    "value": "de-DE"
-                  }
-                ],
-                "asyncWait": true
-              }
-            ]
-          }
-        ],
-        "caseDefault": {
-          "actions": [
-            {
-              "objectType": "Function",
-              "active": true,
-              "fn": "SetLocale",
-              "fnParams": [
-                {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/ProjectLocale",
-                  "value": "en-US"
-                }
-              ],
-              "asyncWait": true
-            }
-          ]
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-
-</div>
-
-<div id="TcHmiContainer_1" data-tchmi-type="tchmi-container" data-tchmi-grid-column-index="7" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
-
-<div id="TcHmiCurrUserTextblock" data-tchmi-type="tchmi-textblock" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Current User" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-vertical-alignment="Top" data-tchmi-text-horizontal-alignment="Center">
-
-
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 0,
-  "right": 0,
-  "top": 5,
-  "bottom": 0,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "%s%GetCurrentUser.name%/s%",
-    "actions": [
-      {
-        "objectType": "Condition",
-        "active": true,
-        "expressions": [
-          {
-            "compare1": {
-              "objectType": "Symbol",
-              "symbolExpression": "%s%GetCurrentUser.name%/s%"
-            },
-            "compare2": {
-              "objectType": "StaticValue",
-              "valueType": "string",
-              "value": "null"
-            },
-            "compareOperator": "!=",
-            "logic": null
-          }
-        ],
-        "true": [
-          {
-            "objectType": "WriteToSymbol",
-            "active": true,
-            "symbolExpression": "%ctrl%TcHmiCurrUserUserTextblock::Text%/ctrl%",
-            "valueType": "tchmi:general#/definitions/String",
-            "value": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/String",
-              "value": "%s%GetCurrentUser.name%/s%"
-            },
-            "asyncWait": true
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-
-<div id="TcHmiCurrUserUserTextblock" data-tchmi-type="tchmi-textblock" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Current User" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-text-vertical-alignment="Bottom" data-tchmi-text-horizontal-alignment="Center">
-
-
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 0,
-  "right": 0,
-  "top": 0,
-  "bottom": 10,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-</div>
-
-</div>
-
 <div id="MenuLogoutButton_2" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="8" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuLogoutButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Logout" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-passiveicon="Images/Icons/Menu/logout_normal.svg" data-tchmi-hovericon="Images/Icons/Menu/logout_pressed.svg" data-tchmi-selectedicon="Images/Icons/Menu/logout_pressed.svg" data-tchmi-pressedicon="Images/Icons/Menu/logout_active.svg">
 
 </div>
@@ -433,22 +203,37 @@
 
 </div>
 
-<div id="TcHmiButton_7" data-tchmi-type="tchmi-button" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="421" data-tchmi-left-unit="px" data-tchmi-text="TcHmiButton_7" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+<div id="TcHmiTextblock_16" data-tchmi-type="tchmi-textblock" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="459" data-tchmi-left-unit="px" data-tchmi-text="TcHmiTextblock_16" data-tchmi-top="243" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
 
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiButton_7.onPressed",
+    "event": "TcHmiTextblock_16.onPressed",
     "actions": [
       {
         "objectType": "Function",
         "active": true,
-        "fn": "OpenLinkInNewTab",
+        "fn": "BindSymbolFromArrayIndex",
         "fnParams": [
           {
             "objectType": "Symbol",
-            "symbolExpression": "%ctrl%TcHmiTextblock_16::Text%/ctrl%"
+            "symbolExpression": "%s%PLC1.HMI.arrStLeds%/s%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Integer",
+            "value": 1
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/Control",
+            "symbolExpression": "%ctrl%TcHmiTextblock_16%/ctrl%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+            "value": "Text"
           }
         ],
         "asyncWait": true
@@ -457,22 +242,6 @@
   }
 ]
 </script>
-</div>
-
-<div id="TcHmiTextbox_8" data-tchmi-type="tchmi-textbox" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="466" data-tchmi-left-unit="px" data-tchmi-text="TcHmiTextbox_8" data-tchmi-top="34" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-
-<div id="TcHmiTextblock_16" data-tchmi-type="tchmi-textblock" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="421" data-tchmi-left-unit="px" data-tchmi-text="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" data-tchmi-top="152" data-tchmi-top-unit="px" data-tchmi-width="449" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
-
 </div>
 
 </div>

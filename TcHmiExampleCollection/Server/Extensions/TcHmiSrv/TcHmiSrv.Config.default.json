@@ -1993,6 +1993,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.sString": {
+            "ACCESS": 3,
+            "CUSTOMERDATA": "",
+            "DOMAIN": "ADS",
+            "MAPPING": "PLC1::MAIN::sString",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/STRING(80)"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.SCOPE.Sinus_Fast50": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",
