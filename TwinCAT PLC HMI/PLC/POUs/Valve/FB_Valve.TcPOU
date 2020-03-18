@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_Valve" Id="{7e198f3d-5c76-4053-b222-a991847d3cc2}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Valve
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	Value 		: LREAL;
+	Parameters 	: ST_ValveParam := (Set := 1, P := 2, I := 3, D := 4, Unit:='Deg');
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Value := HMI.SineVerySlow*180/2;
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Valve">
+      <LineId Id="9" Count="0" />
+      <LineId Id="18" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="SCOPE" Id="{54c950aa-bac6-4655-bd8e-8fef3fee53ef}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SCOPE
+VAR
+	i				: UINT;
+	j				: UINT:=1;
+	t				: UINT;
+	
+	Cosinus_Half	: LREAL;
+	Sinus_Fast		: LREAL;
+	Sinus_Fast50	: LREAL;
+	Sinus_Slow20	: LREAL;
+	Sinus_Slow1		: LREAL;
+	Sinus_Slow2		: LREAL;
+	Sinus_VerySlow	: LREAL;
+	Sinus_SqFast	: LREAL;
+	Sinus_SqSlow	: REAL;
+	Sinus_Cos_Half	: LREAL;
+	SinglePeak		: LREAL;
+	phi				: REAL;
+	Ts				: UINT;
+	vs: LREAL;
+	t2: LREAL;
+	(* Histogram *)
+	arrHistogramData: ARRAY[0..NUM_OF_ROWS] OF LREAL;
+	fTimeStep	: LREAL := 0.001;
+	omega_t		: ARRAY[0..NUM_OF_ROWS] OF LREAL;
+
+	fTemp		: LREAL;
+	ii: INT;
+	bInit: BOOL := true;
+	fStep: LREAL;
+END_VAR
+
+VAR_TEMP
+	Cosinus_Fast: LREAL;
+END_VAR
+
+VAR CONSTANT
+	NUM_OF_ROWS: INT := 99;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+	
+	vs := vs + 0.001;
+	t := t + 1;
+	t2 := t2 + 1.05;
+	i:=i+1;
+	Ts:=128*10;
+	SinglePeak:=0;
+	
+	IF (t>=2*Ts) THEN
+		j:=j+1;
+		t:=t-2*Ts;
+	END_IF
+	
+	phi:=t/Ts;
+	Cosinus_Half:=COS(PI*t/(2*Ts));
+	HMI.SineVerySlow := Sinus_VerySlow:=1 + SIN(vs);
+	Sinus_Slow1:=COS(4*PI* (t+Ts/4+phi)/Ts);
+	Sinus_Slow20 := 15 + 5 * Sinus_Slow1;
+	Sinus_Slow2:= Sinus_VerySlow*COS(4*PI* (t+Ts/3+phi)/Ts);
+	Sinus_Fast:=COS(12*PI*t/Ts);
+	Sinus_Fast50:=50 + 50* SIN(6*PI*t/Ts);
+	Cosinus_Fast:=SIN(12*PI*t2/Ts);
+	Sinus_SqFast:=Sinus_Fast* Sinus_Slow1;
+	Sinus_SqSlow:=LREAL_TO_REAL(Sinus_VerySlow*Sinus_Slow1);
+	
+(**** Histogram ***********************)
+
+IF bInit THEN
+	fStep := 2*PI/(NUM_OF_ROWS+1);
+	FOR ii := 1 TO NUM_OF_ROWS DO
+		omega_t[ii] := omega_t[ii-1] + SIN(fStep);
+	END_FOR
+	bInit:= FALSE;
+END_IF
+
+FOR ii := 0 TO NUM_OF_ROWS DO
+	omega_t[ii] := omega_t[ii] + fTimeStep;
+	fTemp := 20 * SIN(omega_t[ii]);
+	arrHistogramData[ii] := fTemp;
+END_FOR
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="SCOPE">
+      <LineId Id="3" Count="17" />
+      <LineId Id="118" Count="0" />
+      <LineId Id="21" Count="1" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="23" Count="18" />
+      <LineId Id="157" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

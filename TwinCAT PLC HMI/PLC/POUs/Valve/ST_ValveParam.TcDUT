@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <DUT Name="ST_ValveParam" Id="{e252c13d-8ba7-45ac-bd5d-82c6173ddd27}">
+    <Declaration><![CDATA[TYPE ST_ValveParam :
+STRUCT
+	Unit : STRING;
+	Set : INT;
+	P: UINT;
+	I: UINT;
+	D: UINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

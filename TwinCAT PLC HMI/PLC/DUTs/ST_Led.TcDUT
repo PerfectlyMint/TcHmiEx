@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.9">
+  <DUT Name="ST_Led" Id="{1715c94c-fe13-478d-b2ca-6f86d1808486}">
+    <Declaration><![CDATA[TYPE ST_Led :
+STRUCT
+	sName 		: STRING;
+	bControl	: BOOL;
+	bStatus 	: BOOL;
+	nValue		: REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

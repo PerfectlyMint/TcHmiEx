@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="MAIN" Id="{4e5afcba-96c7-4e18-8a68-453b1679d9d2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fbBlink		: FB_Blink;
+	arrFbBlink 	: ARRAY [1..HMI.NUM_OF_LEDS] OF FB_Blink;
+	i: INT;
+	a: INT;
+	b: INT := 1000;
+	asdf: INT;
+	stAi: INT;
+	adfsaa: UINT;
+	bInitAlarms: BOOL;
+	sString : STRING := '{"color": "rgba(255,191,127,1)"}';
+	
+	fbEventLogger : FB_TcEventLogger;
+	fbAlarm01 : FB_TcAlarm;
+	fbMessage01 : FB_TcMessage;
+	bTriggerAlarm01 : BOOL;
+	bConfirmAlarm01 : BOOL;
+	bClearAlarm01	: BOOL;
+	
+	stLed : REFERENCE TO ST_LED;
+	stLedInstance : ST_LED;
+	
+	fbValve: FB_Valve;
+	fbMotor: FB_Motor;
+	LOGSTUFF: BOOL;
+	asd: DINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// Yksittäisen FB:n kutsuminen
+fbBlink(
+	i_bEnable:= HMI.bEnableLed, 
+	i_tTime := T#1S, 
+	O_bOut=> hmi.bLedStatus
+); 
+
+// Taulukossa olevien FB:iden kutsuminen
+FOR i := 1 TO HMI.NUM_OF_LEDS DO
+	arrFbBlink[i]
+	(
+		i_sName 	:= HMI.arrStLeds[i].sName,
+		i_bEnable 	:= HMI.arrStLeds[i].bControl,
+		o_bOut		=> HMI.arrStLeds[i].bStatus
+	);
+END_FOR
+
+SCOPE();
+
+asdf := SIZEOF(HMI.stAi);
+adfsaa := SIZEOF(HMI.arrStLeds[1]);
+
+
+IF (NOT bInitAlarms) THEN
+	bInitAlarms:=TRUE;
+	fbAlarm01.CreateEx(TC_EVENTS.AlarmsClass.Alarm01,TRUE,0);
+	fbMessage01.CreateEx(TC_EVENTS.AlarmsClass.Message01, 0);
+END_IF
+
+IF (bTriggerAlarm01) THEN
+	fbAlarm01.Raise(0);
+	bTriggerAlarm01 := FALSE;
+END_IF
+
+IF (bConfirmAlarm01) THEN
+	fbAlarm01.Confirm(0);
+	bConfirmAlarm01:= FALSE;
+END_IF
+
+IF (bClearAlarm01) THEN
+	fbAlarm01.Clear(0,TRUE);
+	bClearAlarm01 := FALSE;
+	fbMessage01.Send(0);
+END_IF
+
+stLedInstance.nValue:=100;
+stLed REF=stLedInstance;
+
+fbValve();
+fbMotor();
+
+IF LOGSTUFF AND a<b THEN
+	fbMessage01.ipArguments.Clear();
+	fbMessage01.ipArguments.AddDInt(a);
+	fbMessage01.Send(0);
+	a:=a+1;
+END_IF
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="27" Count="0" />
+      <LineId Id="3" Count="4" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="40" Count="1" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="68" Count="2" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="157" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="71" Count="1" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="158" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="112" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="133" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="134" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="182" Count="0" />
+      <LineId Id="187" Count="0" />
+      <LineId Id="184" Count="0" />
+      <LineId Id="189" Count="0" />
+      <LineId Id="186" Count="0" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="201" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

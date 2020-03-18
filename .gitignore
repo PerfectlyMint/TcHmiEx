@@ -1,2 +1,7 @@
 .engineering_servers
 .vs
+_CompileInfo
+_Libraries
+_Boot
+_Config
+/TwinCAT PLC HMI/*.tclrs

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.6">
+  <POU Name="FB_LineChart" Id="{0ad6719c-cc1c-4f05-b770-ab2b18f2f7bc}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_LineChart
+VAR_INPUT
+	i_bEnable : BOOL;
+	i_tUpdateInterval : TIME := T#100MS;
+	i_fCh1Value : LREAL;
+	i_fCh2Value	: LREAL;
+	
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR_IN_OUT
+	arrChartData : ARRAY[0..1,0..199] OF ST_Values_LineChart;
+END_VAR
+VAR
+	i: INT;
+	str: STRING;
+	bTick: BOOL;
+	bReset: BOOL := TRUE;
+	T1_TON: Ton;
+	nStep: REAL := 0.25;	
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+T1_TON(IN := NOT T1_TON.Q AND i_bEnable, PT := i_tUpdateInterval, Q=>bTick);
+
+IF bTick THEN
+	
+   FOR i := 198 TO 0 BY -1 DO
+	   arrChartData[0,i+1].y := arrChartData[0,i].y; 
+	   arrChartData[1,i+1].y := arrChartData[1,i].y; 
+   END_FOR
+   
+   arrChartData[0,0].y := i_fCh1Value;
+   arrChartData[1,0].y := i_fCh2Value;
+   
+END_IF
+
+IF bReset THEN 
+	
+	FOR i:=0 TO 199 BY 1 DO
+	   arrChartData[0,i].x := i * nStep;
+	   arrChartData[0,i].y := 0;
+	   arrChartData[1,i].x := i * nStep;
+	   arrChartData[1,i].y := 0;
+	END_FOR
+	
+	bReset := FALSE;
+	
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="FB_LineChart">
+      <LineId Id="25" Count="7" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="33" Count="2" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="36" Count="6" />
+      <LineId Id="76" Count="1" />
+      <LineId Id="43" Count="4" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

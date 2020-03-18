@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_Motor" Id="{fe771ada-2e33-42ec-85fa-eac4a5319fc1}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Motor
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	Value 		: LREAL;
+	Parameters 	: ST_MotorParam := (Set := 1, P := 2, I := 3, D := 4, Unit:='%');
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Value := HMI.SineVerySlow*100/2;
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Motor">
+      <LineId Id="9" Count="0" />
+      <LineId Id="18" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.6">
+  <POU Name="CHART" Id="{8cba52cb-9881-4001-838d-19e531324f0d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM CHART
+VAR
+	arrChartData : ARRAY[0..1,0..199] OF ST_Values_LineChart;
+	bEnable: BOOL := true;
+	fbLineChart: FB_LineChart;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+fbLineChart(
+	i_bEnable			:= bEnable := TRUE, 
+	i_tUpdateInterval	:= T#100MS, 
+	i_fCh1Value			:= SCOPE.Sinus_Fast50, 
+	i_fCh2Value			:= SCOPE.Sinus_Slow20, 
+	arrChartData		:= arrChartData
+);]]></ST>
+    </Implementation>
+    <LineIds Name="CHART">
+      <LineId Id="7" Count="0" />
+      <LineId Id="45" Count="4" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="51" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.9">
+  <DUT Name="ST_AI" Id="{dbd56288-bf88-486a-bdc9-7a54d9dbf8d4}">
+    <Declaration><![CDATA[TYPE ST_AI :
+STRUCT
+ID: STRING;
+Measure:REAL;
+Low_Range:REAL;
+High_Range:REAL;
+Decimals:INT;
+Unit:STRING;
+Alarmtype:INT;
+LowLimit: REAL;
+LowDelay:DINT;
+LowAlarm:BOOL;
+HighLimit: REAL;
+HighDelay:DINT;
+HighAlarm:BOOL;
+Sensortype:INT;
+ShortCircuitAlarm:BOOL;
+BrokenWireAlarm:BOOL;
+Offset:REAL;
+ManualValue:REAL;
+ManualControl:INT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="HMI" Id="{7159aa7c-3a57-4b4d-a87b-f927b76096fd}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	bEnableLed	: BOOL;
+	bLedStatus	: BOOL;
+	stAi		: ST_AI;
+	arrStLeds	: ARRAY[1..NUM_OF_LEDS] OF ST_Led := 
+	[
+		(sName := 'Led #01'),
+		(sName := 'Led #02'),
+		(sName := 'Led #03'),
+		(sName := 'Led #04'),
+		(sName := 'Led #05'),
+		(sName := 'Led #06'),
+		(sName := 'Led #07'),
+		(sName := 'Led #08'),
+		(sName := 'Led #09'),
+		(sName := 'Led #10')
+	];
+	arrPersons	: ARRAY [1..NUM_OF_PERSONS] OF STRING := 
+	[
+		'Person1',
+		'Person2',
+		'Person3',
+		'Person4',
+		'Person5',
+		'Person6',
+		'Person7',
+		'Person8',
+		'Person9',
+		'Person10'
+	];
+	SineVerySlow	: LREAL;
+END_VAR
+
+VAR_GLOBAL CONSTANT
+	NUM_OF_LEDS : INT := 10;	
+	NUM_OF_PERSONS : INT := 10;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

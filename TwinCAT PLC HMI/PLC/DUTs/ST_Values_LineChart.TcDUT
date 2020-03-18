@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.6">
+  <DUT Name="ST_Values_LineChart" Id="{49e12c2a-e5e1-4f76-ba1b-adef120a2bc8}">
+    <Declaration><![CDATA[TYPE ST_Values_LineChart :
+STRUCT
+	x:LREAL;
+	y:LREAL;
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
