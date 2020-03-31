@@ -37,59 +37,63 @@
   ],
   "userControls": [
     {
-      "url": "Alarms/AlarmTypeToggleButton.usercontrol"
+      "url": "Content/Alarms/AlarmTypeToggleButton.usercontrol"
     },
     {
-      "url": "Devices/Actuator/Actuator.usercontrol"
+      "url": "Content/Devices/Actuator/Actuator.usercontrol"
     },
     {
-      "url": "Devices/Actuator/ActuatorPopup.usercontrol"
+      "url": "Content/Devices/Actuator/ActuatorPopup.usercontrol"
     },
     {
-      "url": "Devices/LedControl/LedControl.usercontrol"
+      "url": "Content/Devices/LedControl/LedControl.usercontrol"
     },
     {
-      "url": "Menu/MenuButton.usercontrol"
+      "url": "Content/Menu/MenuButton.usercontrol"
     },
     {
-      "url": "Menu/MenuLogoutButton.usercontrol"
+      "url": "Content/Menu/MenuLogoutButton.usercontrol"
     }
   ],
   "content": [
     {
-      "url": "Alarms/Alarms.content",
+      "url": "Content/Alarms/Alarms.content",
       "preload": false
     },
     {
-      "url": "Examples/Example_External3dLib.content",
+      "url": "Content/Examples/Example_External3dLib.content",
       "preload": false
     },
     {
-      "url": "Examples/Example_PlcArrayManagement.content",
+      "url": "Content/Examples/Example_PlcArrayManagement.content",
       "preload": false
     },
     {
-      "url": "Examples/Examples.content",
+      "url": "Content/Examples/Examples.content",
       "preload": false
     },
     {
-      "url": "Examples/Examples_Main.content",
+      "url": "Content/Examples/Examples_Main.content",
       "preload": false
     },
     {
-      "url": "Keyboard/Keyboard.content",
+      "url": "Content/Keyboard/Keyboard.content",
       "preload": false
     },
     {
-      "url": "Plotter/Plotter.content",
+      "url": "Content/Plotter/Plotter.content",
       "preload": false
     },
     {
-      "url": "ProcessChart/ProcessChart.content",
+      "url": "Content/ProcessChart/ProcessChart.content",
       "preload": false
     },
     {
-      "url": "Trend/Trendline.content",
+      "url": "Content/Trend/Trendline.content",
+      "preload": false
+    },
+    {
+      "url": "Scripts/Trend/Trendline.content",
       "preload": false
     }
   ],
@@ -101,67 +105,70 @@
   ],
   "userFunctions": [
     {
-      "url": "Trend/AddToTrendChart.js"
+      "url": "Scripts/Formatters/Base64ToString.js"
     },
     {
-      "url": "Trend/AddToTrendChartFromUC.js"
+      "url": "Scripts/Trend/AddToTrendChart.js"
     },
     {
-      "url": "Trend/GetHistorizedToComboBox.js"
+      "url": "Scripts/Trend/RequestHistorizedDataOfSymbol.js"
     },
     {
-      "url": "Trend/RemoveFromTrendChart.js"
+      "url": "Scripts/Trend/RemoveFromTrendChart.js"
     },
     {
-      "url": "Popup/PopupOpen.js"
+      "url": "Scripts/Trend/GetHistorizedToComboBox.js"
     },
     {
-      "url": "Popup/PopupCloseThis.js"
+      "url": "Scripts/Trend/CreateTrendLineChartLineGraphDescriptionDefinitionList.js"
     },
     {
-      "url": "Scripts/DegreesToRotation.js"
+      "url": "Scripts/Trend/AddToTrendChartFromUC.js"
     },
     {
-      "url": "Scripts/DecimalFormatter.js"
+      "url": "Scripts/Animating/Animate.js"
     },
     {
-      "url": "Scripts/WriteToSymbolProperty.js"
+      "url": "Scripts/Binding/BindSymbolFromArrayIndex.js"
     },
     {
-      "url": "Scripts/DegreesToRotationWithValveEnable.js"
+      "url": "Scripts/Formatters/DegreesToRotation.js"
     },
     {
-      "url": "Scripts/ValueToColorFade.js"
+      "url": "Scripts/Formatters/DecimalFormatter.js"
     },
     {
-      "url": "Scripts/ValueToColorFadeWithMotorEnable.js"
+      "url": "Scripts/Formatters/DegreesToRotationWithValveEnable.js"
     },
     {
-      "url": "Scripts/ResolveSymbol.js"
+      "url": "Scripts/Events/GetLoggedSystemEvents.js"
     },
     {
-      "url": "Scripts/BooleanToVisibility.js"
+      "url": "Scripts/Binding/ResolveSymbol.js"
     },
     {
-      "url": "Scripts/GetSymbolFromArrayIndex.js"
+      "url": "Scripts/Binding/OpenLinkInNewTab.js"
     },
     {
-      "url": "Trend/RequestHistorizedDataOfSymbol.js"
+      "url": "Scripts/Binding/GetSymbolFromArrayIndex.js"
     },
     {
-      "url": "Scripts/GetLoggedSystemEvents.js"
+      "url": "Scripts/Binding/WriteToSymbolProperty.js"
     },
     {
-      "url": "Trend/CreateTrendLineChartLineGraphDescriptionDefinitionList.js"
+      "url": "Scripts/Formatters/ValueToColorFadeWithMotorEnable.js"
     },
     {
-      "url": "Scripts/Animate.js"
+      "url": "Scripts/Formatters/ValueToColorFade.js"
     },
     {
-      "url": "Scripts/OpenLinkInNewTab.js"
+      "url": "Scripts/Popup/PopupCloseThis.js"
     },
     {
-      "url": "Scripts/BindSymbolFromArrayIndex.js"
+      "url": "Scripts/Popup/PopupOpen.js"
+    },
+    {
+      "url": "Scripts/Formatters/BooleanToVisibility.js"
     }
   ],
   "symbols": {

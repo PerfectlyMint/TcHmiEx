@@ -46,7 +46,7 @@
 ]
 </script>
 
-<div id="TcHmiContentRegion" data-tchmi-type="tchmi-region" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-target-content="ProcessChart/ProcessChart.content" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px">
+<div id="TcHmiContentRegion" data-tchmi-type="tchmi-region" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-target-content="Content/ProcessChart/ProcessChart.content" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px">
 
 
 
@@ -177,71 +177,42 @@
 
   </div>
 
-<div id="MenuButton_2" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Trend" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Trend/Trendline.content" data-tchmi-passiveicon="Images/Icons/Menu/blue_diagram.svg" data-tchmi-hovericon="Images/Icons/Menu/grey_diagram.svg" data-tchmi-selectedicon="Images/Icons/Menu/black_diagram.svg" data-tchmi-pressedicon="Images/Icons/Menu/white_diagram.svg">
+<div id="MenuButton_2" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Trend" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Content/Trend/Trendline.content" data-tchmi-passiveicon="Images/Icons/Menu/blue_diagram.svg" data-tchmi-hovericon="Images/Icons/Menu/grey_diagram.svg" data-tchmi-selectedicon="Images/Icons/Menu/black_diagram.svg" data-tchmi-pressedicon="Images/Icons/Menu/white_diagram.svg">
 
 </div>
 
-<div id="MenuButton_3" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="3" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="PI-Chart" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="ProcessChart/ProcessChart.content" data-tchmi-passiveicon="Images/Icons/Menu/blue_sign.svg" data-tchmi-hovericon="Images/Icons/Menu/grey_sign.svg" data-tchmi-selectedicon="Images/Icons/Menu/black_sign.svg" data-tchmi-pressedicon="Images/Icons/Menu/white_sign.svg">
+<div id="MenuButton_3" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="3" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="PI-Chart" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Content/ProcessChart/ProcessChart.content" data-tchmi-passiveicon="Images/Icons/Menu/blue_sign.svg" data-tchmi-hovericon="Images/Icons/Menu/grey_sign.svg" data-tchmi-selectedicon="Images/Icons/Menu/black_sign.svg" data-tchmi-pressedicon="Images/Icons/Menu/white_sign.svg">
 
 </div>
 
-<div id="MenuButton_4" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="4" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Alarms" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Alarms/Alarms.content" data-tchmi-passiveicon="Images/Icons/Menu/message_draggin.svg" data-tchmi-hovericon="Images/Icons/Menu/message_inactive.svg" data-tchmi-selectedicon="Images/Icons/Menu/message_normal.svg" data-tchmi-pressedicon="Images/Icons/Menu/message_active.svg">
+<div id="MenuButton_4" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="4" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Alarms" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Content/Alarms/Alarms.content" data-tchmi-passiveicon="Images/Icons/Menu/message_draggin.svg" data-tchmi-hovericon="Images/Icons/Menu/message_inactive.svg" data-tchmi-selectedicon="Images/Icons/Menu/message_normal.svg" data-tchmi-pressedicon="Images/Icons/Menu/message_active.svg">
 
 </div>
 
-<div id="MenuLogoutButton_2" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="8" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuLogoutButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Logout" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-passiveicon="Images/Icons/Menu/logout_normal.svg" data-tchmi-hovericon="Images/Icons/Menu/logout_pressed.svg" data-tchmi-selectedicon="Images/Icons/Menu/logout_pressed.svg" data-tchmi-pressedicon="Images/Icons/Menu/logout_active.svg">
+<div id="MenuLogoutButton_2" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="8" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Menu/MenuLogoutButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Logout" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-passiveicon="Images/Icons/Menu/logout_normal.svg" data-tchmi-hovericon="Images/Icons/Menu/logout_pressed.svg" data-tchmi-selectedicon="Images/Icons/Menu/logout_pressed.svg" data-tchmi-pressedicon="Images/Icons/Menu/logout_active.svg">
 
 </div>
 
-<div id="MenuButton_5" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="5" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Examples" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Examples/Examples.content" data-tchmi-passiveicon="Images/Icons/Menu/message_draggin.svg" data-tchmi-hovericon="Images/Icons/Menu/message_inactive.svg" data-tchmi-selectedicon="Images/Icons/Menu/message_normal.svg" data-tchmi-pressedicon="Images/Icons/Menu/message_active.svg">
+<div id="MenuButton_5" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="5" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Examples" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Content/Examples/Examples.content" data-tchmi-passiveicon="Images/Icons/Menu/message_draggin.svg" data-tchmi-hovericon="Images/Icons/Menu/message_inactive.svg" data-tchmi-selectedicon="Images/Icons/Menu/message_normal.svg" data-tchmi-pressedicon="Images/Icons/Menu/message_active.svg">
 
 </div>
 
-<div id="MenuButton_7" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="9" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Plotter" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Plotter/Plotter.content" data-tchmi-passiveicon="Images/Icons/Menu/blue_diagram.svg" data-tchmi-hovericon="Images/Icons/Menu/grey_diagram.svg" data-tchmi-selectedicon="Images/Icons/Menu/black_diagram.svg" data-tchmi-pressedicon="Images/Icons/Menu/white_diagram.svg">
+<div id="MenuButton_7" data-tchmi-type="tchmi-user-control-host" data-tchmi-grid-column-index="9" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Menu/MenuButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-buttontext="Plotter" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-targetregion="%ctrl%TcHmiContentRegion%/ctrl%" data-tchmi-targetcontent="Content/Plotter/Plotter.content" data-tchmi-passiveicon="Images/Icons/Menu/blue_diagram.svg" data-tchmi-hovericon="Images/Icons/Menu/grey_diagram.svg" data-tchmi-selectedicon="Images/Icons/Menu/black_diagram.svg" data-tchmi-pressedicon="Images/Icons/Menu/white_diagram.svg">
 
 </div>
 
 </div>
 
-<div id="TcHmiTextblock_16" data-tchmi-type="tchmi-textblock" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="459" data-tchmi-left-unit="px" data-tchmi-text="TcHmiTextblock_16" data-tchmi-top="243" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "TcHmiTextblock_16.onPressed",
-    "actions": [
-      {
-        "objectType": "Function",
-        "active": true,
-        "fn": "BindSymbolFromArrayIndex",
-        "fnParams": [
-          {
-            "objectType": "Symbol",
-            "symbolExpression": "%s%PLC1.HMI.arrStLeds%/s%"
-          },
-          {
-            "objectType": "StaticValue",
-            "valueType": "tchmi:general#/definitions/Integer",
-            "value": 1
-          },
-          {
-            "objectType": "Symbol",
-            "valueType": "tchmi:framework#/definitions/Control",
-            "symbolExpression": "%ctrl%TcHmiTextblock_16%/ctrl%"
-          },
-          {
-            "objectType": "StaticValue",
-            "valueType": "tchmi:framework#/definitions/ControlPropertyName",
-            "value": "Text"
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  }
-]
+<div id="TcHmiTextbox_10" data-tchmi-type="tchmi-textbox" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="90" data-tchmi-left-unit="px" data-tchmi-text="TcHmiTextbox_10" data-tchmi-top="295" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
 </script>
+
 </div>
 
 </div>

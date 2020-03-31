@@ -11,12 +11,12 @@
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
     <Name>TcHmiExampleCollection</Name>
-    <HmiCommunicationRouterPort>10106</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10108</HmiCommunicationRouterPort>
     <HmiFrameworkVersion>Latest</HmiFrameworkVersion>
     <HmiCommunicationServerPort>3004</HmiCommunicationServerPort>
     <HmiInitial>1.10.1336.203</HmiInitial>
     <HmiRecent>1.10.1336.404</HmiRecent>
-    <CodeBehindOrder>Examples\External3dLib\three.min.js,Examples\External3dLib\STLLoader.js,Examples\External3dLib\WebGL.js,Examples\External3dLib\stats.min.js,Scripts\TcHmiExampleCollection.js,Trend\TcHmiExampleCollection.Trendline.js,Scripts\TcHmiExampleCollection.Utilities.js,Scripts\TcHmiExampleCollection.Utilities.AutoKeyboard.js,Trend\AddToTrendChart.js,Trend\AddToTrendChartFromUC.js,Trend\GetHistorizedToComboBox.js,Trend\RemoveFromTrendChart.js,Popup\PopupCloseThis.js,Popup\PopupOpen.js,Scripts\DecimalFormatter.js,Scripts\DegreesToRotation.js,Scripts\CheckResolution.js,Scripts\DegreesToRotationWithValveEnable.js,Scripts\DisableContextMenu.js,Scripts\ReadUrlParameter.js,Scripts\ValueToColorFade.js,Scripts\ValueToColorFadeWithMotorEnable.js,Scripts\WriteToSymbolProperty.js,Examples\External3dLib\Example_External3dLib.js,Plotter\plotly-1.50.0.min.js,Plotter\TcHmiExampleCollection.Plotter.js,Scripts\BooleanToVisibility.js,Scripts\GetSymbolFromArrayIndex.js,Scripts\ResolveSymbol.js</CodeBehindOrder>
+    <CodeBehindOrder>Scripts\ThreeJS\three.min.js,Scripts\ThreeJS\STLLoader.js,Scripts\ThreeJS\WebGL.js,Scripts\ThreeJS\stats.min.js,Scripts\TcHmiEx.js,Scripts\Trend\AddToTrendChart.js,Scripts\Trend\AddToTrendChartFromUC.js,Scripts\Trend\GetHistorizedToComboBox.js,Scripts\Trend\RemoveFromTrendChart.js,Scripts\Popup\PopupCloseThis.js,Scripts\Popup\PopupOpen.js,Scripts\Formatters\DecimalFormatter.js,Scripts\Formatters\DegreesToRotation.js,Scripts\Formatters\DegreesToRotationWithValveEnable.js,Scripts\Formatters\ValueToColorFade.js,Scripts\Formatters\ValueToColorFadeWithMotorEnable.js,Scripts\Binding\WriteToSymbolProperty.js,Scripts\ThreeJS\Example_External3dLib.js,Scripts\Plotly\plotly-1.50.0.min.js,Scripts\Formatters\BooleanToVisibility.js,Scripts\Binding\GetSymbolFromArrayIndex.js,Scripts\Binding\ResolveSymbol.js</CodeBehindOrder>
     <CodeBehindGlobalCssOrder>Fonts\Fonts.css</CodeBehindGlobalCssOrder>
   </PropertyGroup>
   <PropertyGroup>
@@ -85,79 +85,73 @@
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <Target Name="Clean" DependsOnTargets="BaseClean" />
   <ItemGroup>
-    <Content Include="Alarms\Alarms.content">
+    <Content Include="Content\Alarms\Alarms.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Alarms\AlarmTypeToggleButton.usercontrol">
+    <Content Include="Content\Alarms\AlarmTypeToggleButton.usercontrol">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Alarms\AlarmTypeToggleButton.usercontrol.json">
+    <Content Include="Content\Alarms\AlarmTypeToggleButton.usercontrol.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Devices\Actuator\Actuator.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Devices\Actuator\Actuator.usercontrol.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Devices\Actuator\ActuatorPopup.usercontrol">
+      <SubType>Content</SubType>
+      <Link>Content\Devices\Actuator\ActuatorPopup.usercontrol</Link>
+    </Content>
+    <Content Include="Content\Devices\Actuator\ActuatorPopup.usercontrol.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Devices\LedControl\LedControl.usercontrol">
+      <SubType>Content</SubType>
+      <Link>Content\Devices\LedControl\LedControl.usercontrol</Link>
+    </Content>
+    <Content Include="Content\Devices\LedControl\LedControl.usercontrol.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Examples\Examples.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Examples\Examples_Main.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Examples\Example_External3dLib.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Examples\Example_PlcArrayManagement.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Keyboard\Keyboard.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Menu\MenuButton.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Menu\MenuButton.usercontrol.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Menu\MenuLogoutButton.usercontrol">
+      <SubType>Content</SubType>
+      <Link>Content\Menu\MenuLogoutButton.usercontrol</Link>
+    </Content>
+    <Content Include="Content\Menu\MenuLogoutButton.usercontrol.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Plotter\Plotter.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\ProcessChart\ProcessChart.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\Trend\Trendline.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="CustomLogin.html">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Devices\Actuator\Actuator.usercontrol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Devices\Actuator\Actuator.usercontrol.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Devices\Actuator\ActuatorPopup.usercontrol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Devices\Actuator\ActuatorPopup.usercontrol.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Devices\LedControl\LedControl.usercontrol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Devices\LedControl\LedControl.usercontrol.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\Example_External3dLib.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\Examples.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\Examples_Main.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\Example_PlcArrayManagement.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\Example_External3dLib.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\models\stl\ascii\pr2_head_pan.stl">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\models\stl\ascii\pr2_head_tilt.stl">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\models\stl\ascii\slotted_disk.stl">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\models\stl\binary\colored.stl">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\models\stl\binary\pr2_head_pan.stl">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\models\stl\binary\pr2_head_tilt.stl">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\stats.min.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\STLLoader.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\three.min.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Examples\External3dLib\WebGL.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Icons\Actuators\blue_sani_valve_30.svg">
@@ -223,200 +217,204 @@
     <Content Include="Imports\Images\close_normal.svg">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Keyboard\Keyboard.content">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Localization\fi-FI.localization">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\fi-FI.tpl.localization">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Menu\MenuLogoutButton.usercontrol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Menu\MenuLogoutButton.usercontrol.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Menu\MenuButton.usercontrol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Menu\MenuButton.usercontrol.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Plotter\plotly-1.50.0.min.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Plotter\Plotter.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Plotter\TcHmiExampleCollection.Plotter.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Popup\PopupCloseThis.function.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Popup\PopupCloseThis.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Popup\PopupOpen.function.json">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Popup\PopupOpen.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ProcessChart\ProcessChart.content">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="REST\api.html">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\Animate.function.json">
+    <Content Include="Scripts\Animating\Animate.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\Animate.js">
+    <Content Include="Scripts\Animating\Animate.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\BooleanToVisibility.function.json">
+    <Content Include="Scripts\Binding\BindSymbolFromArrayIndex.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\BooleanToVisibility.js">
+    <Content Include="Scripts\Binding\BindSymbolFromArrayIndex.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\CheckResolution.js">
+    <Content Include="Scripts\Binding\GetSymbolFromArrayIndex.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\BindSymbolFromArrayIndex.function.json">
+    <Content Include="Scripts\Binding\GetSymbolFromArrayIndex.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\BindSymbolFromArrayIndex.js">
+    <Content Include="Scripts\Binding\OpenLinkInNewTab.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DisableContextMenu.js">
+    <Content Include="Scripts\Binding\OpenLinkInNewTab.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\GetLoggedSystemEvents.function.json">
+    <Content Include="Scripts\Binding\ResolveSymbol.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\GetLoggedSystemEvents.js">
+    <Content Include="Scripts\Binding\ResolveSymbol.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\GetSymbolFromArrayIndex.function.json">
+    <Content Include="Scripts\Binding\WriteToSymbolProperty.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\GetSymbolFromArrayIndex.js">
+    <Content Include="Scripts\Binding\WriteToSymbolProperty.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\OpenLinkInNewTab.function.json">
+    <Content Include="Scripts\Events\GetLoggedSystemEvents.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\OpenLinkInNewTab.js">
+    <Content Include="Scripts\Events\GetLoggedSystemEvents.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ReadUrlParameter.js">
+    <Content Include="Scripts\Formatters\Base64ToString.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ResolveSymbol.function.json">
+    <Content Include="Scripts\Formatters\Base64ToString.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ResolveSymbol.js">
+    <Content Include="Scripts\Formatters\BooleanToVisibility.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ValueToColorFadeWithMotorEnable.function.json">
+    <Content Include="Scripts\Formatters\BooleanToVisibility.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ValueToColorFadeWithMotorEnable.js">
+    <Content Include="Scripts\Formatters\DecimalFormatter.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DegreesToRotationWithValveEnable.function.json">
+    <Content Include="Scripts\Formatters\DecimalFormatter.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DegreesToRotationWithValveEnable.js">
+    <Content Include="Scripts\Formatters\DegreesToRotation.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DecimalFormatter.function.json">
+    <Content Include="Scripts\Formatters\DegreesToRotation.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DecimalFormatter.js">
+    <Content Include="Scripts\Formatters\DegreesToRotationWithValveEnable.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DegreesToRotation.function.json">
+    <Content Include="Scripts\Formatters\DegreesToRotationWithValveEnable.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\DegreesToRotation.js">
+    <Content Include="Scripts\Formatters\ValueToColorFade.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\TcHmiExampleCollection.js">
+    <Content Include="Scripts\Formatters\ValueToColorFade.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\TcHmiExampleCollection.Utilities.AutoKeyboard.js">
+    <Content Include="Scripts\Formatters\ValueToColorFadeWithMotorEnable.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\TcHmiExampleCollection.Utilities.js">
+    <Content Include="Scripts\Formatters\ValueToColorFadeWithMotorEnable.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ValueToColorFade.function.json">
+    <Content Include="Scripts\Plotly\plotly-1.50.0.min.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\ValueToColorFade.js">
+    <Content Include="Scripts\Popup\PopupCloseThis.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\WriteToSymbolProperty.function.json">
+    <Content Include="Scripts\Popup\PopupCloseThis.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Scripts\WriteToSymbolProperty.js">
+    <Content Include="Scripts\Popup\PopupOpen.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\AddToTrendChart.function.json">
+    <Content Include="Scripts\Popup\PopupOpen.js">
+      <SubType>Content</SubType>
+      <Link>Scripts\Popup\PopupOpen.js</Link>
+    </Content>
+    <Content Include="Scripts\ThreeJS\Example_External3dLib.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\AddToTrendChart.js">
+    <Content Include="Scripts\ThreeJS\models\stl\ascii\pr2_head_pan.stl">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\AddToTrendChartFromUC.function.json">
+    <Content Include="Scripts\ThreeJS\models\stl\ascii\pr2_head_tilt.stl">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\AddToTrendChartFromUC.js">
+    <Content Include="Scripts\ThreeJS\models\stl\ascii\slotted_disk.stl">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\CreateTrendLineChartLineGraphDescriptionDefinitionList.function.json">
+    <Content Include="Scripts\ThreeJS\models\stl\binary\colored.stl">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\CreateTrendLineChartLineGraphDescriptionDefinitionList.js">
+    <Content Include="Scripts\ThreeJS\models\stl\binary\pr2_head_pan.stl">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\GetHistorizedToComboBox.function.json">
+    <Content Include="Scripts\ThreeJS\models\stl\binary\pr2_head_tilt.stl">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\GetHistorizedToComboBox.js">
+    <Content Include="Scripts\ThreeJS\stats.min.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\RemoveFromTrendChart.function.json">
+    <Content Include="Scripts\ThreeJS\STLLoader.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\RemoveFromTrendChart.js">
+    <Content Include="Scripts\ThreeJS\three.min.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\RequestHistorizedDataOfSymbol.function.json">
+    <Content Include="Scripts\ThreeJS\WebGL.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\RequestHistorizedDataOfSymbol.js">
+    <Content Include="Scripts\Trend\AddToTrendChart.function.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\Trendline.content">
+    <Content Include="Scripts\Trend\AddToTrendChart.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Trend\TcHmiExampleCollection.Trendline.js">
+    <Content Include="Scripts\Trend\AddToTrendChartFromUC.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Trend\AddToTrendChartFromUC.js">
+      <SubType>Content</SubType>
+      <Link>Scripts\Trend\AddToTrendChartFromUC.js</Link>
+    </Content>
+    <Content Include="Scripts\Trend\CreateTrendLineChartLineGraphDescriptionDefinitionList.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Trend\CreateTrendLineChartLineGraphDescriptionDefinitionList.js">
+      <SubType>Content</SubType>
+      <Link>Scripts\Trend\CreateTrendLineChartLineGraphDescriptionDefinitionList.js</Link>
+    </Content>
+    <Content Include="Scripts\Trend\GetHistorizedToComboBox.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Trend\GetHistorizedToComboBox.js">
+      <SubType>Content</SubType>
+      <Link>Scripts\Trend\GetHistorizedToComboBox.js</Link>
+    </Content>
+    <Content Include="Scripts\Trend\RemoveFromTrendChart.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Trend\RemoveFromTrendChart.js">
+      <SubType>Content</SubType>
+      <Link>Scripts\Trend\RemoveFromTrendChart.js</Link>
+    </Content>
+    <Content Include="Scripts\Trend\RequestHistorizedDataOfSymbol.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Trend\RequestHistorizedDataOfSymbol.js">
+      <SubType>Content</SubType>
+      <Link>Scripts\Trend\RequestHistorizedDataOfSymbol.js</Link>
+    </Content>
+    <Content Include="Scripts\Trend\Trendline.content" />
+    <Content Include="Scripts\TcHmiEx.js">
       <SubType>Content</SubType>
     </Content>
     <Folder Include=".hmipkgs" />
-    <Folder Include="Devices\Actuator" />
-    <Folder Include="Devices\LedControl" />
-    <Folder Include="Examples\External3dLib" />
-    <Folder Include="Examples\External3dLib\models" />
-    <Folder Include="Examples\External3dLib\models\stl" />
-    <Folder Include="Examples\External3dLib\models\stl\ascii\" />
-    <Folder Include="Examples\External3dLib\models\stl\binary" />
+    <Folder Include="Content\Alarms\" />
+    <Folder Include="Content\Devices\" />
+    <Folder Include="Content\Devices\Actuator\" />
+    <Folder Include="Content\Devices\LedControl" />
+    <Folder Include="Content\Examples\" />
+    <Folder Include="Content\Keyboard\" />
+    <Folder Include="Content\Menu\" />
+    <Folder Include="Content\Trend" />
+    <Folder Include="Content\Plotter\" />
+    <Folder Include="Content\ProcessChart\" />
     <Folder Include="Images\Icons" />
     <Folder Include="Images\Icons\Actuators" />
     <Folder Include="Images\Icons\Menu" />
@@ -427,17 +425,21 @@
     <Folder Include="Imports\Images" />
     <Folder Include="Imports\Videos" />
     <Folder Include="Localization" />
-    <Folder Include="Keyboard" />
-    <Folder Include="Devices" />
-    <Folder Include="Menu" />
-    <Folder Include="Alarms" />
-    <Folder Include="Examples" />
+    <Folder Include="Content" />
     <Folder Include="REST" />
-    <Folder Include="Plotter" />
-    <Folder Include="ProcessChart" />
-    <Folder Include="Popup" />
     <Folder Include="Scripts" />
-    <Folder Include="Trend" />
+    <Folder Include="Scripts\Formatters" />
+    <Folder Include="Scripts\Animating" />
+    <Folder Include="Scripts\Binding" />
+    <Folder Include="Scripts\Events" />
+    <Folder Include="Scripts\Plotly" />
+    <Folder Include="Scripts\Popup\" />
+    <Folder Include="Scripts\ThreeJS\" />
+    <Folder Include="Scripts\ThreeJS\models\" />
+    <Folder Include="Scripts\ThreeJS\models\stl\" />
+    <Folder Include="Scripts\ThreeJS\models\stl\ascii\" />
+    <Folder Include="Scripts\ThreeJS\models\stl\binary\" />
+    <Folder Include="Scripts\Trend\" />
     <Folder Include="Server\Extensions\ADS" />
     <Folder Include="Server\Extensions\TcHmiEventLogger" />
     <Folder Include="Server\Extensions\TcHmiLua" />

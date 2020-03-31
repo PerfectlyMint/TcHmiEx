@@ -4,33 +4,6 @@
     <TcHmiEditor_SplitAreaStates>{
   "EditorSettings": [
     {
-      "Path": "Alarms\\AlarmTypeToggleButton.usercontrol",
-      "DesignAreaSplitSize": "Full",
-      "CodeAreaSplitSize": "Minimized",
-      "Orientation": "Horizontal",
-      "DesignAreaPosition": "Left",
-      "CodeAreaPosition": "Right",
-      "SplitPercentage": 0.5
-    },
-    {
-      "Path": "Examples\\Example_PlcArrayManagement.content",
-      "DesignAreaSplitSize": "Full",
-      "CodeAreaSplitSize": "Minimized",
-      "Orientation": "Horizontal",
-      "DesignAreaPosition": "Left",
-      "CodeAreaPosition": "Right",
-      "SplitPercentage": 0.5
-    },
-    {
-      "Path": "Plotter\\Plotter.content",
-      "DesignAreaSplitSize": "Full",
-      "CodeAreaSplitSize": "Minimized",
-      "Orientation": "Horizontal",
-      "DesignAreaPosition": "Left",
-      "CodeAreaPosition": "Right",
-      "SplitPercentage": 0.9988099960333201
-    },
-    {
       "Path": "Desktop.view",
       "DesignAreaSplitSize": "Full",
       "CodeAreaSplitSize": "Minimized",
