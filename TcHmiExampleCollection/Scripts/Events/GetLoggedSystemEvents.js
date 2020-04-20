@@ -7,6 +7,13 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Export logged system events as CSV 
+    * @name GetLoggedSystemEvents
+    * @function
+    * @kind Framework Function
+    * @returns {void}
+*/
 (function (TcHmi) {
 
     var GetLoggedSystemEvents = function () {

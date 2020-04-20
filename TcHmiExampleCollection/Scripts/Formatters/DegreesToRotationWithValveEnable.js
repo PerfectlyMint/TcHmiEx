@@ -7,8 +7,16 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Converts angle degrees to TransformList
+    * @name DegreesToRotationWithValveEnable
+    * @function
+    * @kind Framework Function
+    * @param {Number} Degrees Angle to use
+    * @param {Number} ValveEnable Determine if valve is enabled
+    * @returns {TcHmi.TransformList}
+*/
 (function (TcHmi) {
-
     var DegreesToRotationWithValveEnable = function (Degrees,ValveEnable) {
         if (ValveEnable==1) {
             return [{

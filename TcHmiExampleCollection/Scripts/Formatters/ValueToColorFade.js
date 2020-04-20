@@ -7,6 +7,18 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Converts value to shade color scale
+    * @name ValueToColorFade
+    * @function
+    * @kind Framework Function
+    * @param {Number} Value Value to use
+    * @param {Number} StartColor Shading start color
+    * @param {Number} EndColor Shading end color
+    * @param {Number} StartValueScale Value scaling start point
+    * @param {Number} EndValueScale Value scaling end point
+    * @returns {TcHmi.Color}
+*/
 (function (TcHmi) {
 
     var ValueToColorFade = function (Value, StartColor, EndColor, StartValueScale, EndValueScale) {

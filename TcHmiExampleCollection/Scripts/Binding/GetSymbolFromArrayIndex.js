@@ -7,8 +7,17 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
-(function (TcHmi) {
+/**
+    * Function to create Symbol of array index
+    * @name GetSymbolFromArrayIndex
+    * @function
+    * @kind Framework Function
+    * @param {Symbol} ArraySymbol Array symbol to use
+    * @param {Number} Index Array index number to use
+    * @returns {Symbol}
+*/
 
+(function (TcHmi) {
     var GetSymbolFromArrayIndex = function (ArraySymbol, Index) {
 		// Just editing the symbol expression
         ArraySymbol.__symbol.__expression.__content = ArraySymbol.__symbol.__expression.__content + "[" + Index + "]";

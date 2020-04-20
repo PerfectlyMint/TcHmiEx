@@ -7,6 +7,15 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Format decimal count
+    * @name DecimalFormatter
+    * @function
+    * @kind Framework Function
+    * @param {Number} Value Value to format
+    * @param {Number} Decimals Decimal count
+    * @returns {TcHmi.Visibility}
+*/
 (function (TcHmi) {
 
     var DecimalFormatter = function (Value, Decimals) {

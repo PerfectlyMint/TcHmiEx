@@ -12,7 +12,7 @@
  */
 
 /**
- * TcHmiEx settings variable.
+ * TcHmiEx settings object.
  */
 var TcHmiExSettings = {
     KeyboardAutoHideOnEnter : false,
@@ -191,8 +191,23 @@ TcHmiEx = (function (TcHmiExSettings) {
             */
             ClickCoordinates: (function () {
                 var ClickCoordinates = {
+                    /**
+                    * @name TcHmiEx.Utilities.ClickCoordinates.x
+                    * @description Container for click/press event x coordinate
+                    * @returns {Number}
+                    */
                     x: null,
+                    /**
+                    * @name TcHmiEx.Utilities.ClickCoordinates.y
+                    * @description Container for click/press event y coordinate
+                    * @returns {Number}
+                    */
                     y: null,
+                    /**
+                    * @name TcHmiEx.Utilities.ClickCoordinates.getClickPressCoordinates
+                    * @description Callback function to handle the click events
+                    * @returns {ClickCoordinates}
+                    */
                     getClickPressCoordinates: function (event) {
                         TcHmiEx.Utilities.ClickCoordinates.x = event.clientX;
                         TcHmiEx.Utilities.ClickCoordinates.y = event.clientY;
@@ -207,18 +222,46 @@ TcHmiEx = (function (TcHmiExSettings) {
                 };
                 return ClickCoordinates;
             })(),
+            /**
+            * @name TcHmiEx.Utilities.generateUuidv4
+            * @description Uuidv4 Generator
+            * @returns {String}
+            */
             generateUuidv4 : function () {
                 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
                     var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
                     return v.toString(16);
                 })
             },
+            /**
+            * @name TcHmiEx.Utilities.TwoPointScaling
+            * @description Scale value between two ranges
+            * @param {Number} Value Value to scale
+            * @param {Number} xMin xMin
+            * @param {Number} xMax xMax
+            * @param {Number} yMin yMin
+            * @param {Number} yMax yMax
+            * @returns {Number}
+            */
             TwoPointScaling : function (Value, xMin, xMax, yMin, yMax) {
                 ratio = (Value - xMin) / (xMax - xMin);
                 return ratio * (yMax - yMin) + yMin;
             },
+            /**
+            * @name TcHmiEx.Utilities.Csv
+            * @description Csv helper functions
+            * @returns {Csv}
+            */
             Csv : (function(){
                 var Csv = {
+                    /**
+                    * @name TcHmiEx.Utilities.Csv.AddToTrendChart
+                    * @description Function to convert array of objects to csv
+                    * @author cmbaughman  https://gist.github.com/cmbaughman/586fd115b627e0a355553015ad5f0576#file-jsexportcsv-js 
+                    * @function 
+                    * @param {Object} args Converter arguments
+                    * @returns {Object}
+                    */
                     convertArrayOfObjectsToCSV : function (args) {
                         var result, ctr, keys, columnDelimiter, lineDelimiter, data;
 
@@ -256,6 +299,14 @@ TcHmiEx = (function (TcHmiExSettings) {
 
                         return result;
                     },
+                    /**
+                    * @name TcHmiEx.Utilities.Csv.downloadCSV
+                    * @description Function to download CSV file
+                    * @function 
+                    * @param {Object} args Converter arguments
+                    * @param {Object} dataArray Data to download
+                    * @returns {void}
+                    */
                     downloadCSV : function (args, dataArray) {
                         var data, filename, link;
                         var csv = TcHmiEx.Utilities.Csv.convertArrayOfObjectsToCSV({
@@ -280,6 +331,13 @@ TcHmiEx = (function (TcHmiExSettings) {
                 };
                 return Csv;
             })(),
+            /**
+            * @name TcHmiEx.Utilities.DisableContextMenu
+            * @description Context menu disabler
+            * @function 
+            * @param {Object} TcHmiExSettings TcHmiExSettings
+            * @returns {void}
+            */
             DisableContextMenu : (function(TcHmiExSettings){
                 if (typeof TcHmiExSettings.DisableContextMenu !== 'undefined') {
                     if (TCHMI_ENABLE_DESIGNER_MODE !== true) {
@@ -296,6 +354,13 @@ TcHmiEx = (function (TcHmiExSettings) {
                     }
                 }
             })(TcHmiExSettings),
+            /**
+            * @name TcHmiEx.Utilities.ViewChanger
+            * @description View size change listener listeners for view size changes and changing views
+            * @function 
+            * @param {Object} TcHmiExSettings TcHmiExSettings
+            * @returns {void}
+            */
             ViewChanger : (function (TcHmiExSettings) {
                 //Register to the global onInitialized event; the anonymous function will be called only one time and will register the event listener for resolution change
                 let destr = TcHmi.EventProvider.register("onInitialized", function () {
@@ -355,6 +420,12 @@ TcHmiEx = (function (TcHmiExSettings) {
                     }
                 }
             })(TcHmiExSettings),
+            /**
+            * @name TcHmiEx.Utilities.ViewChanger
+            * @description Random color generator
+            * @function 
+            * @returns {TcHmi.Color}
+            */
             generateColor : function () {
                 var r = Math.floor(Math.random() * 128 + 64);          // Random between 64-192
                 var g = Math.floor(Math.random() * 128 + 64);          // Random between 64-192
@@ -367,11 +438,11 @@ TcHmiEx = (function (TcHmiExSettings) {
         return Utilities;
     })(TcHmiExSettings) || {};
     /**
-         * @name TcHmiEx.Trendline
-         * @description Utilities object
-         * @param {object} - TcHmiExSettings Settings object
-         * @returns {Utilities}
-         */
+    * @name TcHmiEx.Trendline
+    * @description Trendline object
+    * @param {Object} - TcHmiExSettings Settings object
+    * @returns {Trendline}
+    */
     TcHmiEx.Trendline = (function (TcHmiExSettings) {
         var Trendline = {
             DebugMode: true,
@@ -408,6 +479,12 @@ TcHmiEx = (function (TcHmiExSettings) {
         }
         return Trendline;
     })(TcHmiExSettings) || {};
+    /**
+    * @name TcHmiEx.Plotter
+    * @description Plotter object
+    * @param {Object} - TcHmiExSettings Settings object
+    * @returns {Plotter}
+    */
     TcHmiEx.Plotter = (function (TcHmiExSettings) {
         var Plotter = {
             PlotData : [],

@@ -7,8 +7,17 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Function to animate element movement
+    * @name Animate
+    * @function
+    * @kind Framework Function
+    * @param {Ctx} ctx Context object
+    * @param {Element} ControlElement Control to animate
+    * @param {Boolean} Cleanup Clean up after animation
+    * @returns {Boolean}
+*/
 (function (TcHmi) {
-
     var Animate = function (ctx, ControlElement, Cleanup) {
         /* https://infosys.beckhoff.com/content/1033/te2000_tc3_hmi_engineering/6435832203.html?id=4429431160664893841 */
         var animation = new TcHmi.Animation(ControlElement.getId(), '') // Create the animation

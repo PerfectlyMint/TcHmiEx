@@ -7,8 +7,19 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Function to bind single array index from array
+    * @name BindSymbolFromArrayIndex
+    * @function
+    * @kind Framework Function
+    * @param {Ctx} ctx Context object
+    * @param {Symbol} ArraySymbol Array symbol
+    * @param {Number} Index Array index number to bind
+    * @param {Control} Control Control to bind into
+    * @param {Property} Property Property of control to bind into
+    * @returns {ctx}
+*/
 (function (TcHmi) {
-
     var BindSymbolFromArrayIndex = function (ctx,ArraySymbol,Index,Control,Property) {
 		// Just editing the symbol expression
         ArraySymbol.__symbol.__expression.__content = ArraySymbol.__symbol.__expression.__content + "[" + Index + "]";

@@ -7,8 +7,17 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Write to single proprty of bound symbol
+    * @name WriteToSymbolProperty
+    * @function
+    * @kind Framework Function
+    * @param {Symbol} SymbolToWrite Symbol to write
+    * @param {String} PropertyToWrite Property to write
+    * @param {Any} ValueToWrite Value to write
+    * @returns {void}
+*/
 (function (TcHmi) {
-
     var WriteToSymbolProperty = function (SymbolToWrite, PropertyToWrite, ValueToWrite) {
         var ControlName = SymbolToWrite.__symbol.__expression.__expression.replace("%pp%", "").replace("%/pp%", "").split(".")[0];
         var Control = TcHmi.Controls.get(ControlName);

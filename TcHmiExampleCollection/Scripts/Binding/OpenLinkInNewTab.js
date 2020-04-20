@@ -7,8 +7,16 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
-(function (TcHmi) {
+/**
+    * Function to open link in new tab
+    * @name OpenLinkInNewTab
+    * @function
+    * @kind Framework Function
+    * @param {String} URL URL to open
+    * @returns {void}
+*/
 
+(function (TcHmi) {
     var OpenLinkInNewTab = function (URL) {
         try {
             window.open(URL);

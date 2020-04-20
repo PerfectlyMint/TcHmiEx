@@ -7,8 +7,16 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Resolve bound symbol of property
+    * @name ResolveSymbol
+    * @function
+    * @kind Framework Function
+    * @param {Control} ControlFromToResolve Control to resolve
+    * @param {String} ParameterToResolve Property to resolve
+    * @returns {void}
+*/
 (function (TcHmi) {
-
     var ResolveSymbol = function (ControlFromToResolve,ParameterToResolve) {
 
         //var Control = TcHmi.Controls.get(ControlFromToResolve);

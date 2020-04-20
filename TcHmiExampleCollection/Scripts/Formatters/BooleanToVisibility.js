@@ -7,6 +7,14 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Convert Boolean to visibility
+    * @name BooleanToVisibility
+    * @function
+    * @kind Framework Function
+    * @param {Boolean} Input Base64 data
+    * @returns {TcHmi.Visibility}
+*/
 (function (TcHmi) {
 
     var BooleanToVisibility = function (Input) {

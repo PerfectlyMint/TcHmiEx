@@ -6,7 +6,24 @@
 // Keep this lines for a best effort IntelliSense of Visual Studio 2013/2015.
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
-
+/**
+    * Function to open popups
+    * @description Can be used to open either User Control or Region
+    * @name PopupOpen
+    * @function
+    * @kind Framework Function
+    * @param {TcHmi.ContentPath} Content Control 
+    * @param {TcHmi.String} Header Control 
+    * @param {TcHmi.HorizontalAlignment} HorizontalAlignment Control 
+    * @param {TcHmi.VerticalAlignment} VerticalAlignment Control 
+    * @param {TcHmi.Number} HorizontalDistance Control 
+    * @param {TcHmi.Number} VerticalDistance Control 
+    * @param {TcHmi.Number} Height Control 
+    * @param {TcHmi.Number} Width Control 
+    * @param {TcHmi.Control} WhereToInsert Control 
+    * @param {Boolean} AddWhereclicked Control 
+    * @returns {void}
+*/
 (function (TcHmi) {
 
     var PopupOpen = function (Content,Header,HorizontalAlignment,VerticalAlignment,HorizontalDistance,VerticalDistance,Height,Width,WhereToInsert,AddWhereclicked) {
