@@ -11,7 +11,7 @@
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
     <Name>TcHmiExampleCollection</Name>
-    <HmiCommunicationRouterPort>10108</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10110</HmiCommunicationRouterPort>
     <HmiFrameworkVersion>Latest</HmiFrameworkVersion>
     <HmiCommunicationServerPort>3004</HmiCommunicationServerPort>
     <HmiInitial>1.10.1336.203</HmiInitial>
@@ -154,6 +154,9 @@
     <Content Include="CustomLogin.html">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\Icons\Actuators\Ball_valve.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\Icons\Actuators\blue_sani_valve_30.svg">
       <SubType>Content</SubType>
     </Content>
@@ -214,6 +217,9 @@
     <Content Include="Images\Icons\Menu\white_sign.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\Instrumentation\Pump_with_tank_pid_en.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Imports\Images\close_normal.svg">
       <SubType>Content</SubType>
     </Content>
@@ -230,6 +236,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Scripts\Animating\Animate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Animating\ChangeControlSvgClasses.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Animating\ChangeControlSvgClasses.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Scripts\Binding\BindSymbolFromArrayIndex.function.json">
@@ -400,7 +412,9 @@
       <SubType>Content</SubType>
       <Link>Scripts\Trend\RequestHistorizedDataOfSymbol.js</Link>
     </Content>
-    <Content Include="Scripts\Trend\Trendline.content" />
+    <Content Include="Scripts\Trend\Trendline.content">
+      <Cache>True</Cache>
+    </Content>
     <Content Include="Scripts\TcHmiEx.js">
       <SubType>Content</SubType>
     </Content>
@@ -418,6 +432,7 @@
     <Folder Include="Images\Icons" />
     <Folder Include="Images\Icons\Actuators" />
     <Folder Include="Images\Icons\Menu" />
+    <Folder Include="Images\Instrumentation" />
     <Folder Include="Libraries" />
     <Folder Include="Images" />
     <Folder Include="Images\Manifest" />

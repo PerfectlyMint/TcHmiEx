@@ -7,6 +7,17 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Function to request Historized Data of a symbol in CSV format.
+    * @name RequestHistorizedDataOfSymbol
+    * @function
+    * @kind Framework Function
+    * @param {String} Symbol Symbol expression of the requestable symbol.
+    * @param {String} StartTime StartTime of export
+    * @param {String} EndTime StartTime of export
+    * @returns {ListItemList}
+*/
+
 (function (TcHmi) {
 
     var RequestHistorizedDataOfSymbol = function (SymbolName,StartTime,EndTime) {
@@ -53,7 +64,7 @@
             var SubscriptionID = TcHmi.Server.subscribe(commands, 2000, function (data) {
                 console.log(data.response.commands[0].readValue.axesData[0]);
 
-                TcHmiEx.Utilities.CSV.downloadCSV({ filename: String(Date.now() + " export.csv") }, data.response.commands[0].readValue.axesData[0]);
+                TcHmiEx.Utilities.Csv.downloadCSV({ filename: String(Date.now() + " export.csv") }, data.response.commands[0].readValue.axesData[0]);
 
                 if (data.error !== TcHmi.Errors.NONE) {
                     // Handle TcHmi.Server class level error here.

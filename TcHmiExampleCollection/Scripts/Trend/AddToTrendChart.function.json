@@ -21,6 +21,17 @@
         "bindable": true,
         "restParameter": false,
         "asReference": false
+      },
+      {
+        "name": "TrendChartList",
+        "displayName": "TrendChartList",
+        "type": "tchmi:project#/definitions/Symbol_Of_Object",
+        "description": "",
+        "defaultValue": "{\r\n  \"XAxisList\": [],\r\n  \"YAxisList\": []\r\n}",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": true
       }
     ]
   },

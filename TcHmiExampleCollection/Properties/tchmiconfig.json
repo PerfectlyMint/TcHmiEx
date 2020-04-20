@@ -94,7 +94,7 @@
     },
     {
       "url": "Scripts/Trend/Trendline.content",
-      "preload": false
+      "preload": true
     }
   ],
   "views": [
@@ -169,6 +169,9 @@
     },
     {
       "url": "Scripts/Formatters/BooleanToVisibility.js"
+    },
+    {
+      "url": "Scripts/Animating/ChangeControlSvgClasses.js"
     }
   ],
   "symbols": {
@@ -182,6 +185,15 @@
       "testBool": {
         "value": true,
         "type": "tchmi:general#/definitions/Boolean",
+        "persist": false,
+        "readonly": false
+      },
+      "TrendChart_01": {
+        "value": {
+          "XAxisList": [],
+          "YAxisList": []
+        },
+        "type": "tchmi:general#/definitions/Object",
         "persist": false,
         "readonly": false
       }

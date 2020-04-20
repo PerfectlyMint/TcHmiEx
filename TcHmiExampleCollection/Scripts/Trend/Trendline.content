@@ -1,29 +1,6 @@
 ﻿<div id="Trendline" data-tchmi-type="tchmi-content" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-min-height="100" data-tchmi-min-height-unit="%">
 
-<div id="TcHmiTrendLineChart" data-tchmi-type="tchmi-trend-line-chart" data-tchmi-end="Latest" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-start="PT1M" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-x-axis-name="" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-x-main-tick-steps="6" data-tchmi-show-x-axis-name="True" data-tchmi-x-label-font-size="16" data-tchmi-x-label-font-weight="Bold" data-tchmi-x-axis-width="2" data-tchmi-grid-line-width="2" data-tchmi-subgrid-show-vertical-lines="True" data-tchmi-show-menu-bar="True" data-tchmi-menu-bar-position="Top" data-tchmi-grid-line-style="Solid" data-tchmi-server-domain="TcHmiSqliteHistorize">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="TcHmiTrendLineChart" data-tchmi-type="tchmi-trend-line-chart" data-tchmi-end="Latest" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-start="PT1M" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-x-axis-name="" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-x-main-tick-steps="6" data-tchmi-show-x-axis-name="True" data-tchmi-x-label-font-size="16" data-tchmi-x-label-font-weight="Bold" data-tchmi-x-axis-width="2" data-tchmi-grid-line-width="2" data-tchmi-subgrid-show-vertical-lines="True" data-tchmi-show-menu-bar="True" data-tchmi-menu-bar-position="Top" data-tchmi-grid-line-style="Solid" data-tchmi-server-domain="TcHmiSqliteHistorize" data-tchmi-line-graph-descriptions="%f%%i%TrendChart_01%/i%.XAxisList%/f%" data-tchmi-y-axis="%f%%i%TrendChart_01%/i%.YAxisList%/f%">
 
 
 <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">{
@@ -58,28 +35,13 @@
   "color": "rgba(0, 0, 0, 1)"
 }</script>
 
-
-
-
-
-
-
-
-
-
-
 <script data-tchmi-target-attribute="data-tchmi-tooltip-background-color" type="application/json">{
   "color": "rgba(255, 255, 255, 1)"
 }</script>
 
-
-
-
-
-
 </div>
 
-<div id="TrendlineCombobox" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="Select" data-tchmi-height="7" data-tchmi-height-unit="%" data-tchmi-left="35" data-tchmi-left-unit="%" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-width="25" data-tchmi-width-unit="%" data-tchmi-src-data="%f%GetHistorizedToComboBox(%s%TcHmiSqliteHistorize.Config::historizedSymbolList%/s%)%/f%" data-tchmi-drop-down-style="Mobile" data-tchmi-data-height="30" data-tchmi-max-list-height="250">
+<div id="TrendlineCombobox" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="Select" data-tchmi-height="7" data-tchmi-height-unit="%" data-tchmi-left="35" data-tchmi-left-unit="%" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-width="25" data-tchmi-width-unit="%" data-tchmi-src-data="%f%GetHistorizedToComboBox(%s%TcHmiSqliteHistorize.Config::historizedSymbolList%/s%)%/f%" data-tchmi-drop-down-style="Classic" data-tchmi-data-height="30" data-tchmi-max-list-height="250">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -89,12 +51,9 @@
 }
 </script>
 
-
-
 </div>
 
-<div id="Select_From_Dropdown" data-tchmi-type="tchmi-button" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="35" data-tchmi-left-unit="%" data-tchmi-text="Add\n(Select From Dropdown)" data-tchmi-top="60" data-tchmi-top-unit="%" data-tchmi-width="10" data-tchmi-width-unit="%" data-tchmi-word-wrap="True">
-
+<div id="Select_From_Dropdown" data-tchmi-type="tchmi-button" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="35.0" data-tchmi-left-unit="%" data-tchmi-text="Add\n(Select From Dropdown)" data-tchmi-top="60.0" data-tchmi-top-unit="%" data-tchmi-width="10" data-tchmi-width-unit="%" data-tchmi-word-wrap="True">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -108,7 +67,11 @@
         "fnParams": [
           {
             "objectType": "Symbol",
-            "symbolExpression": "%ctrl%TrendlineCombobox::SelectedText%/ctrl%"
+            "symbolExpression": "%ctrl%TrendlineCombobox::SelectedValue%/ctrl%"
+          },
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%i%TrendChart_01%/i%"
           }
         ],
         "asyncWait": true
@@ -120,9 +83,6 @@
 </div>
 
 <div id="Select_From_Grid" data-tchmi-type="tchmi-button" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="45" data-tchmi-left-unit="%" data-tchmi-text="Remove\n(Select From Grid)" data-tchmi-top="60" data-tchmi-top-unit="%" data-tchmi-width="10" data-tchmi-width-unit="%" data-tchmi-word-wrap="True">
-
-
-
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -140,11 +100,7 @@
           },
           {
             "objectType": "Symbol",
-            "symbolExpression": "%i%trendChartParameters%/i%"
-          },
-          {
-            "objectType": "Symbol",
-            "symbolExpression": "%i%trendChartYAxis%/i%"
+            "symbolExpression": "%i%TrendChart_01%/i%"
           }
         ],
         "asyncWait": true
@@ -155,7 +111,7 @@
 </script>
 </div>
 
-<div id="TrendlineSelectedSymbols" data-tchmi-type="tchmi-datagrid" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-min-height="200" data-tchmi-width="34.0" data-tchmi-height="50">
+<div id="TrendlineSelectedSymbols" data-tchmi-type="tchmi-datagrid" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-min-height="200" data-tchmi-width="34.0" data-tchmi-height="50" data-tchmi-src-data="%f%%i%TrendChart_01%/i%.XAxisList%/f%">
 <script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
 [
   {
@@ -191,34 +147,28 @@
 }
 </script>
 
-</div>
 
-<div id="ADD_CheckEvent" data-tchmi-type="tchmi-button" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="55" data-tchmi-left-unit="%" data-tchmi-text="Add\n(Check Event)" data-tchmi-top="60" data-tchmi-top-unit="%" data-tchmi-width="10" data-tchmi-width-unit="%" data-tchmi-word-wrap="True">
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
-    "event": "ADD_CheckEvent.onPressed",
+    "event": "TrendlineSelectedSymbols.onDataChanged",
     "actions": [
       {
-        "objectType": "Function",
+        "objectType": "WriteToSymbol",
         "active": true,
-        "fn": "AddToTrendChart",
-        "fnParams": [
-          {
-            "objectType": "Symbol",
-            "symbolExpression": "%ctrl%TrendlineCombobox::SelectedText%/ctrl%"
-          },
-          {
-            "objectType": "Symbol",
-            "symbolExpression": "%i%trendChartParameters%/i%"
-          }
-        ],
+        "symbolExpression": "%ctrl%TrendlineSelectedSymbols::SelectedRowIndex%/ctrl%",
+        "valueType": "tchmi:general#/definitions/UDINT",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/UDINT",
+          "value": 0
+        },
         "asyncWait": true
       }
     ]
   }
-]</script>
+]
+</script>
 </div>
 
 <div id="RequestSymbolHistoryDataButton" data-tchmi-type="tchmi-button" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="64.9" data-tchmi-left-unit="%" data-tchmi-text="Request Data from History Server" data-tchmi-top="60" data-tchmi-top-unit="%" data-tchmi-width="10" data-tchmi-width-unit="%" data-tchmi-word-wrap="True">

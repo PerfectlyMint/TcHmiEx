@@ -11,6 +11,9 @@
  * Version: 0.0.0.1
  */
 
+/**
+ * TcHmiEx settings variable.
+ */
 var TcHmiExSettings = {
     KeyboardAutoHideOnEnter : false,
     KeyboardAutoOpenOnInput : true,
@@ -22,11 +25,27 @@ var TcHmiExSettings = {
     TrendDebugMode : true
 };
 
-
+/**
+ * TcHmiEx Framework extension.
+ * @param {object} - Settings Object
+ * @returns {TcHmiEx}
+ */
 TcHmiEx = (function (TcHmiExSettings) {
     var TcHmiEx = {};
+     /**
+     * @name TcHmiEx.Utilities
+     * @description Utilities object
+     * @param {object} - TcHmiExSettings Settings object
+     * @returns {Utilities}
+     */
     TcHmiEx.Utilities = (function(TcHmiExSettings) {
         var Utilities = {
+            /**
+            * @name TcHmiEx.Utilities.AutoKeyboard
+            * @description AutoKeyboard object
+            * @param {object} - TcHmiExSettings Settings object
+            * @returns {AutoKeyboard}
+            */
             AutoKeyboard : (function(TcHmiExSettings) {
                 var Autokeyboard = {
                     parameters : {
@@ -71,7 +90,13 @@ TcHmiEx = (function (TcHmiExSettings) {
                 }
                 return Autokeyboard;
             })(TcHmiExSettings),
-            dragElement : function (elmnt) {
+            /**
+            * @name TcHmiEx.Utilities.dragElement
+            * @description Helper function to create draggable objects
+            * @param {Element} - Element Element to make draggable
+            * @returns {void}
+            */
+            dragElement: function (elmnt) {
                 var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
                 if (document.getElementById(elmnt.id + ".header")) {
                     // if present, the header is where you move the DIV from:
@@ -117,7 +142,12 @@ TcHmiEx = (function (TcHmiExSettings) {
                     //document.ontouchmove = null;
                 }
             },
-            StringFunctions : (function() {
+            /**
+            * @name TcHmiEx.Utilities.StringFunctions
+            * @description Additional String functios to make life easier
+            * @returns {void}
+            */
+            StringFunctions: (function () {
                 String.prototype.endsWith = function () {
                     if ((this.lastIndexOf(arguments[0]) > -1) && (this.lastIndexOf(arguments[0])) == (this.length - arguments[0].length))
                         return true;
@@ -137,7 +167,14 @@ TcHmiEx = (function (TcHmiExSettings) {
                         return false;
                 }
             })(),
-            SwitchView : function (_name, _callback) {
+            /**
+            * @name TcHmiEx.Utilities.SwitchView
+            * @description Function to change view
+            * @param {String} - View View path
+            * @param {callback} - Callback Callback
+            * @returns {void}
+            */
+            SwitchView: function (_name, _callback) {
                 var v1 = TcHmi.View.get();
                 TcHmi.Log.debug(v1.getId());
                 TcHmi.View.load(_name + '.view', function (data) {
@@ -147,7 +184,12 @@ TcHmiEx = (function (TcHmiExSettings) {
                         _callback();
                 })
             },
-            ClickCoordinates : (function () {
+            /**
+            * @name TcHmiEx.Utilities.ClickCoordinates
+            * @description Click Coordinate Object
+            * @returns {ClickCoordinates}
+            */
+            ClickCoordinates: (function () {
                 var ClickCoordinates = {
                     x: null,
                     y: null,
@@ -216,7 +258,7 @@ TcHmiEx = (function (TcHmiExSettings) {
                     },
                     downloadCSV : function (args, dataArray) {
                         var data, filename, link;
-                        var csv = TcHmiEx.Utilities.CSV.convertArrayOfObjectsToCSV({
+                        var csv = TcHmiEx.Utilities.Csv.convertArrayOfObjectsToCSV({
                             data: dataArray
                         });
                         if (csv == null) return;
@@ -236,7 +278,7 @@ TcHmiEx = (function (TcHmiExSettings) {
                         document.body.removeChild(link);
                     }
                 };
-            
+                return Csv;
             })(),
             DisableContextMenu : (function(TcHmiExSettings){
                 if (typeof TcHmiExSettings.DisableContextMenu !== 'undefined') {
@@ -324,6 +366,12 @@ TcHmiEx = (function (TcHmiExSettings) {
         };
         return Utilities;
     })(TcHmiExSettings) || {};
+    /**
+         * @name TcHmiEx.Trendline
+         * @description Utilities object
+         * @param {object} - TcHmiExSettings Settings object
+         * @returns {Utilities}
+         */
     TcHmiEx.Trendline = (function (TcHmiExSettings) {
         var Trendline = {
             DebugMode: true,
@@ -331,7 +379,7 @@ TcHmiEx = (function (TcHmiExSettings) {
             getXList: function () { return this.XAxisList },
             YAxisList: [],
             getYList: function () { return this.YAxisList },
-            checkVariale: function (variable) { return variable != null },
+            checkVariale: function (variable) { return variable !== null },
             generateColor: TcHmiEx.Utilities.generateColor,
             XAxisTemplate: {
                 symbol: "",
@@ -348,13 +396,13 @@ TcHmiEx = (function (TcHmiExSettings) {
             YAxisTemplate: { "id": 0, "position": "Left", "mainTickMinValue": 0, "mainTickMaxValue": 100, "showLabels": true, "showAxisName": true, "axisName": "y-axis", "axisNameFontFamily": null, "axisNameFontSize": 15, "axisNameFontSizeUnit": "px", "axisNameFontWeight": "Bold", "decimalPlaces": 2, "unit": "", "autoScaling": false, "labelFontColor": { "color": "rgba(71, 148, 218, 1)" }, "axisColor": { "color": "rgba(71, 148, 218, 1)" }, "axisNameFontColor": { "color": "rgba(71, 148, 218, 1)" } },
             refresh: function () {
                 TcHmi.Symbol.writeEx('%ctrl%TrendlineSelectedSymbols::SrcData%/ctrl%', TcHmiEx.Trendline.XAxisList, function (data) {
-                    if (this.DebugMode) { console.log(data) }
+                    if (this.DebugMode) { console.log(data); }
                 });
                 TcHmi.Symbol.writeEx('%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%', TcHmiEx.Trendline.XAxisList, function (data) {
-                    if (this.DebugMode) { console.log(data) }
+                    if (this.DebugMode) { console.log(data); }
                 });
                 TcHmi.Symbol.writeEx('%ctrl%TcHmiTrendLineChart::YAxis%/ctrl%', TcHmiEx.Trendline.YAxisList, function (data) {
-                    if (this.DebugMode) { console.log(data) }
+                    if (this.DebugMode) { console.log(data); }
                 });
             }
         }

@@ -5,3 +5,6 @@ _Libraries
 _Boot
 _Config
 /TwinCAT PLC HMI/*.tclrs
+out
+/DOCS.bat
+/jsdoc-conf.json

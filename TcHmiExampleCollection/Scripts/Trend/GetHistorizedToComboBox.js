@@ -7,6 +7,14 @@
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
 /// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
 
+/**
+    * Function format Historized Symbols in dropdown format
+    * @name GetHistorizedToComboBox
+    * @function
+    * @kind Framework Function
+    * @param {String} HistorizedSymbols Link to Historized symbols under Server.TcHmiSqliteHistorize
+    * @returns {ListItemList}
+*/
 (function (TcHmi) {
 
     var GetHistorizedToComboBox = function (HistorizedSymbols) {

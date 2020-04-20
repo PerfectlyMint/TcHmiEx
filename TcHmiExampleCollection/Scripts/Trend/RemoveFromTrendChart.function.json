@@ -25,18 +25,7 @@
       {
         "name": "TrendChartList",
         "displayName": "TrendChartList",
-        "type": "tchmi:project#/definitions/Symbol_Of_TrendLineChartLineGraphDescriptionDefinitionList",
-        "description": "",
-        "defaultValue": "",
-        "required": true,
-        "bindable": true,
-        "restParameter": false,
-        "asReference": true
-      },
-      {
-        "name": "TrendChartYList",
-        "displayName": "TrendChartYList",
-        "type": "tchmi:project#/definitions/Symbol_Of_ChartYAxisDefinitionList",
+        "type": "tchmi:project#/definitions/Symbol_Of_Object",
         "description": "",
         "defaultValue": "",
         "required": true,

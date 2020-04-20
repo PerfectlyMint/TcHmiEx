@@ -203,18 +203,6 @@
 
 </div>
 
-<div id="TcHmiTextbox_10" data-tchmi-type="tchmi-textbox" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="90" data-tchmi-left-unit="px" data-tchmi-text="TcHmiTextbox_10" data-tchmi-top="295" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-
 </div>
 
 </div>
