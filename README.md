@@ -3,7 +3,7 @@ My collection of TwinCAT HMI Sample material. I try to stash here the most asked
 Everything here is "use at your own risk" type of code. I take no responsibility if it makes or brakes something.
 
 
-# Documentation will be moving to [DOCUMENTATION](./DOCUMENTATION.MD) when I have free time to do it.
+# Documentation will be moving to [DOCUMENTATION](./DOCUMENTATION.md) when I have free time to do it.
 
 ## Contents
 
