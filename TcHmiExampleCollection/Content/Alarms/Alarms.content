@@ -106,7 +106,7 @@
 ]
 </script>
 
-<div id="AlarmTypeToggleButton_8" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="Active" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%">
+<div id="AlarmTypeToggleButton_8" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="Active" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%">
 <script data-tchmi-target-attribute="data-tchmi-eventfilter" type="application/json">
 [
   {
@@ -144,7 +144,7 @@
 ]
 </script>
 
-<div id="AlarmTypeToggleButton_9" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="Messages" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%" data-tchmi-grid-column-index="1">
+<div id="AlarmTypeToggleButton_9" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="Messages" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%" data-tchmi-grid-column-index="1">
 <script data-tchmi-target-attribute="data-tchmi-eventfilter" type="application/json">
 [
   {
@@ -165,7 +165,7 @@
 
 </div>
 
-<div id="AlarmTypeToggleButton_10" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="Alarms" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%" data-tchmi-grid-column-index="2">
+<div id="AlarmTypeToggleButton_10" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="Alarms" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%" data-tchmi-grid-column-index="2">
 <script data-tchmi-target-attribute="data-tchmi-eventfilter" type="application/json">
 [
   {
@@ -186,7 +186,7 @@
 
 </div>
 
-<div id="AlarmTypeToggleButton_11" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="All" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%" data-tchmi-grid-column-index="4">
+<div id="AlarmTypeToggleButton_11" data-tchmi-type="tchmi-user-control-host" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Content/Alarms/AlarmTypeToggleButton.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text="All" data-tchmi-eventgrid="%ctrl%TcHmiEventGrid%/ctrl%" data-tchmi-grid-column-index="4">
 <script data-tchmi-target-attribute="data-tchmi-eventfilter" type="application/json">
 [
   {

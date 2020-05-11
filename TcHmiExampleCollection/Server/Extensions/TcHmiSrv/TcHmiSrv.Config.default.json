@@ -963,6 +963,93 @@
             },
             "USEMAPPING": true
         },
+        "Config.historizedSymbolList": {
+            "ACCESS": 3,
+            "CUSTOMERDATA": "",
+            "DOMAIN": "TcHmiSqliteHistorize",
+            "MAPPING": "Config::historizedSymbolList",
+            "SCHEMA": {
+                "additionalProperties": {
+                    "additionalProperties": false,
+                    "description": "DESC_HISTORIZEDSYMBOL",
+                    "optionMethod": "ListSymbolNames",
+                    "properties": {
+                        "interval": {
+                            "default": "PT1S",
+                            "format": "timespan",
+                            "formatMinimum": "PT0.01S",
+                            "type": "string"
+                        },
+                        "maxEntries": {
+                            "default": 100000,
+                            "minimum": 1.0,
+                            "type": "integer"
+                        },
+                        "recordingEnabled": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "rowLimit": {
+                            "default": 100000,
+                            "minimum": 1.0,
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "maxEntries",
+                        "interval",
+                        "recordingEnabled",
+                        "rowLimit"
+                    ],
+                    "title": "TITLE_HISTORIZE_SYMBOL",
+                    "type": "object"
+                },
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "Config.historizedSymbolList.PLC1.SCOPE.Sinus_Fast50": {
+            "ACCESS": 3,
+            "CUSTOMERDATA": "",
+            "DOMAIN": "TcHmiSqliteHistorize",
+            "MAPPING": "Config::historizedSymbolList::PLC1.SCOPE.Sinus_Fast50",
+            "SCHEMA": {
+                "additionalProperties": false,
+                "description": "DESC_HISTORIZEDSYMBOL",
+                "optionMethod": "ListSymbolNames",
+                "properties": {
+                    "interval": {
+                        "default": "PT1S",
+                        "format": "timespan",
+                        "formatMinimum": "PT0.01S",
+                        "type": "string"
+                    },
+                    "maxEntries": {
+                        "default": 100000,
+                        "minimum": 1.0,
+                        "type": "integer"
+                    },
+                    "recordingEnabled": {
+                        "default": true,
+                        "type": "boolean"
+                    },
+                    "rowLimit": {
+                        "default": 100000,
+                        "minimum": 1.0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "maxEntries",
+                    "interval",
+                    "recordingEnabled",
+                    "rowLimit"
+                ],
+                "title": "TITLE_HISTORIZE_SYMBOL",
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
         "ConfirmAlarm": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",

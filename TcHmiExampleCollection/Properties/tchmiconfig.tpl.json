@@ -90,7 +90,7 @@
     },
     {
       "url": "Content/Trend/Trendline.content",
-      "preload": false
+      "preload": true
     },
     {
       "url": "Scripts/Trend/Trendline.content",
@@ -172,6 +172,12 @@
     },
     {
       "url": "Scripts/Animating/ChangeControlSvgClasses.js"
+    },
+    {
+      "url": "Scripts/Trend/GetHistorizedConfiguration.js"
+    },
+    {
+      "url": "Scripts/Trend/SetHistorizedConfiguration.js"
     }
   ],
   "symbols": {

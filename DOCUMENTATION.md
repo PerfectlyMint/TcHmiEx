@@ -224,6 +224,18 @@ Function to add Variable to Trend Chart holder
 | VariableToAdd | <code>String</code> | Symbol to add to the list |
 | TrendChartListT | <code>Object</code> | rend Chart variable container |
 
+<a name="GetHistorizedConfiguration"></a>
+
+## GetHistorizedConfiguration ⇒
+Get Historized symbols' Configuration
+
+**Kind**: global Framework Function  
+**Returns**: null  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| resultTarget | <code>TcHmiDatagrid</code> | Target grid for return data |
+
 <a name="GetHistorizedToComboBox"></a>
 
 ## GetHistorizedToComboBox ⇒ <code>ListItemList</code>
@@ -259,6 +271,18 @@ Function to request Historized Data of a symbol in CSV format.
 | Symbol | <code>String</code> | Symbol expression of the requestable symbol. |
 | StartTime | <code>String</code> | StartTime of export |
 | EndTime | <code>String</code> | StartTime of export |
+
+<a name="SetHistorizedConfiguration"></a>
+
+## SetHistorizedConfiguration ⇒
+Set Historized symbols' Configuration
+
+**Kind**: global Framework Function  
+**Returns**: null  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Configuration | <code>Object</code> | Configuration to save |
 
 <a name="TcHmiExSettings"></a>
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="FB_Motor" Id="{fe771ada-2e33-42ec-85fa-eac4a5319fc1}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_Motor
 VAR_INPUT
@@ -15,9 +15,21 @@ END_VAR
       <ST><![CDATA[Value := HMI.SineVerySlow*100/2;
 ]]></ST>
     </Implementation>
+    <Method Name="Start" Id="{4013a4ed-0a14-421c-bb18-40db51eddb1a}">
+      <Declaration><![CDATA[METHOD Start : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="FB_Motor">
       <LineId Id="9" Count="0" />
       <LineId Id="18" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Motor.Start">
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

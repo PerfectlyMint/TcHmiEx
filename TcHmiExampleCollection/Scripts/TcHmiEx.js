@@ -69,7 +69,7 @@ TcHmiEx = (function (TcHmiExSettings) {
                     ),
                     onClick: (function () {
                         $(document).on("click", function (event) {
-                            if (event.target.nodeName == "INPUT") {
+                            if (event.target.nodeName == "INPUT" && event.target.type == "textbox") {
                                 if (TcHmiEx.Utilities.AutoKeyboard.parameters.KeyboardAutoOpenOnInput) {
                                     var PopUpFunction = TcHmi.Functions.getFunction("PopupOpen");
                                     PopUpFunction("Content/Keyboard/Keyboard.content", "Left", "Top", 0, 0, 500, 1000, 500, TcHmi.Controls.get("Desktop"), true);

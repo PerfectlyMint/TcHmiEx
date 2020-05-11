@@ -1,0 +1,28 @@
+﻿{
+  "function": {
+    "name": "GetHistorizedConfiguration",
+    "displayName": "GetHistorizedConfiguration",
+    "visible": true,
+    "category": "Trend",
+    "waitMode": "Synchronous",
+    "injectContextObject": false,
+    "description": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/Object"
+    },
+    "arguments": [
+      {
+        "name": "resultTarget",
+        "displayName": "resultTarget",
+        "type": "tchmi:framework#/definitions/TcHmiDatagrid",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      }
+    ]
+  },
+  "$schema": "C:/TwinCAT/Functions/TE2000-HMI-Engineering/Infrastructure/TcHmiFramework/Latest/Schema/FunctionDescription.Schema.json"
+}
