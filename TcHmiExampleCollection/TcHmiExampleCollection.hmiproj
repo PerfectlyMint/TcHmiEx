@@ -251,6 +251,12 @@
     <Content Include="Scripts\Binding\BindSymbolFromArrayIndex.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Scripts\Binding\GetMappedSymbolsOfType.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scripts\Binding\GetMappedSymbolsOfType.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Scripts\Binding\GetSymbolFromArrayIndex.function.json">
       <SubType>Content</SubType>
     </Content>

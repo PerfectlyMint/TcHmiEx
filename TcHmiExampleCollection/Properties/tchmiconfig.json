@@ -178,6 +178,9 @@
     },
     {
       "url": "Scripts/Trend/SetHistorizedConfiguration.js"
+    },
+    {
+      "url": "Scripts/Binding/GetMappedSymbolsOfType.js"
     }
   ],
   "symbols": {

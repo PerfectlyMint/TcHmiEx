@@ -22,7 +22,19 @@ var TcHmiExSettings = {
     DesktopView : 'Desktop.view',
     TabletView : 'Desktop.view',
     MobileView: 'Desktop.view',
-    TrendDebugMode : true
+    TrendDebugMode: true,
+    UrlParameters: [
+        {
+            parameter: "View",
+            value: "Desktop",
+            action: function () { }
+        },
+        {
+            parameter: "View",
+            value: "Mobile",
+            action: function () { }
+        }
+    ]
 };
 
 /**
@@ -40,6 +52,46 @@ TcHmiEx = (function (TcHmiExSettings) {
      */
     TcHmiEx.Utilities = (function(TcHmiExSettings) {
         var Utilities = {
+            /**
+            * @name TcHmiEx.Utilities.UrlParameters
+            * @description Url Parameter handler
+            * @param {object} - TcHmiExSettings Settings object
+            * @returns {null}
+            */
+            UrlParameters : (function(TcHmiExSettings){
+                let destr = TcHmi.EventProvider.register("onInitialized", function () {
+                    // This event will be raised only once, so it is nice to cleanup
+                    destr();
+
+                    // Get the complete url from browser and splitting the url at "?" in an array, e.g. http://127.0.0.1:1010/?View=View1
+                    let paramArray = window.location.href.split('?');
+                    let subParamArray = [];
+                    let actionList = [];
+
+                    // If no parameters are set just exit early
+                    if (paramArray.length>1) {
+                        subParamArray = paramArray[1].split('&');
+                    }
+                    else {
+                        return;
+                    }
+
+                    for (let i = 0; i<subParamArray.length; i++) {
+                        let action = {};
+                        let parameter = subParamArray[i].split('=');
+                        action.parameter = parameter[0];
+                        action.value = parameter[1];
+                        actionList.push(action);
+                    }
+                    for (let i = 0; actionList.length; i++) {
+                        for (let j = 0; TcHmiExSettings.UrlParameters.length; j++) {
+                            if (actionList[i].parameter == TcHmiExSettings.UrlParameters[j].parameter) {
+                                TcHmiExSettings.UrlParameters[j].action();
+                            }
+                        }
+                    }
+                })
+            })(TcHmiExSettings),
             /**
             * @name TcHmiEx.Utilities.AutoKeyboard
             * @description AutoKeyboard object

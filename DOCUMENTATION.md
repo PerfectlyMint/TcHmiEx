@@ -39,6 +39,17 @@ Function to bind single array index from array
 | Control | <code>Control</code> | Control to bind into |
 | Property | <code>Property</code> | Property of control to bind into |
 
+<a name="GetMappedSymbolsOfType"></a>
+
+## GetMappedSymbolsOfType ⇒ <code>Array</code>
+Gets Mapped Symbols Of Specified Type
+
+**Kind**: global Framework Function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Type | <code>String</code> | String |
+
 <a name="GetSymbolFromArrayIndex"></a>
 
 ## GetSymbolFromArrayIndex ⇒ <code>Symbol</code>
@@ -304,6 +315,7 @@ TcHmiEx Framework extension.
 
 * [TcHmiEx](#TcHmiEx) ⇒ [<code>TcHmiEx</code>](#TcHmiEx)
     * [.Utilities](#TcHmiEx.Utilities) ⇒ <code>Utilities</code>
+        * [.UrlParameters](#TcHmiEx.Utilities.UrlParameters) ⇒ <code>null</code>
         * [.AutoKeyboard](#TcHmiEx.Utilities.AutoKeyboard) ⇒ <code>AutoKeyboard</code>
         * [.dragElement](#TcHmiEx.Utilities.dragElement) ⇒ <code>void</code>
         * [.StringFunctions](#TcHmiEx.Utilities.StringFunctions) ⇒ <code>void</code>
@@ -336,6 +348,7 @@ Utilities object
 
 
 * [.Utilities](#TcHmiEx.Utilities) ⇒ <code>Utilities</code>
+    * [.UrlParameters](#TcHmiEx.Utilities.UrlParameters) ⇒ <code>null</code>
     * [.AutoKeyboard](#TcHmiEx.Utilities.AutoKeyboard) ⇒ <code>AutoKeyboard</code>
     * [.dragElement](#TcHmiEx.Utilities.dragElement) ⇒ <code>void</code>
     * [.StringFunctions](#TcHmiEx.Utilities.StringFunctions) ⇒ <code>void</code>
@@ -352,6 +365,17 @@ Utilities object
     * [.DisableContextMenu(TcHmiExSettings)](#TcHmiEx.Utilities.DisableContextMenu) ⇒ <code>void</code>
     * [.ViewChanger(TcHmiExSettings)](#TcHmiEx.Utilities.ViewChanger) ⇒ <code>void</code>
     * [.ViewChanger()](#TcHmiEx.Utilities.ViewChanger) ⇒ <code>TcHmi.Color</code>
+
+<a name="TcHmiEx.Utilities.UrlParameters"></a>
+
+#### Utilities.UrlParameters ⇒ <code>null</code>
+Url Parameter handler
+
+**Kind**: static property of [<code>Utilities</code>](#TcHmiEx.Utilities)  
+
+| Type | Description |
+| --- | --- |
+| <code>object</code> | TcHmiExSettings Settings object |
 
 <a name="TcHmiEx.Utilities.AutoKeyboard"></a>
 
