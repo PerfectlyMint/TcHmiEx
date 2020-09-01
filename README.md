@@ -1,3 +1,5 @@
+# This library as a whole does not work yet with the new HMI version 1.12!
+
 # TwinCAT HMI Samples
 My collection of TwinCAT HMI Sample material. I try to stash here the most asked and most useful scripts and parts of project for everyones use.
 Everything here is "use at your own risk" type of code. I take no responsibility if it makes or brakes something.
